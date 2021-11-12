@@ -12,6 +12,9 @@
         <activity
             android:name=".Personas"
             android:exported="true" />
+	<activity
+            android:name=".Carros"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -24,3 +27,4 @@
     </application>
 
 </manifest>
+

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -21,7 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     SharedPreferences preferencias;
     EditText txtName;
-    Button btnAceptar;
+    Button btnPersonas;
+    Button btnCarros;
 
 
     @Override
@@ -43,7 +45,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //       // dbp.insertPerson(per);
 //        Toast.makeText(this,"la cantidad de personas son:" + dbp.conteoPersonas(), Toast.LENGTH_SHORT).show();
 
-
+        btnPersonas = findViewById(R.id.btnPersonas);
+        btnCarros = findViewById(R.id.btnPersonas);
+        btnPersonas.setOnClickListener(this);
+        btnCarros.setOnClickListener(this);
     }
 
     @Override
@@ -53,5 +58,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            editor.putString("Name", txtName.getText().toString());
 //            editor.commit();
 //        }
+        switch (v.getId()) {
+            case R.id.btnPersonas:
+                Intent intent = new Intent( MainActivity.this,Personas.class);
+                startActivity(intent);
+                break;
+            case R.id.btnCarros:
+                Intent intent2 = new Intent( MainActivity.this,Carros.class);
+                startActivity(intent2);
+                break;
+        }
     }
 }
