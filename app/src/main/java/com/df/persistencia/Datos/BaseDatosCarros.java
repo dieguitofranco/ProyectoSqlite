@@ -24,13 +24,16 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(String.format("CREATE TABLE %s " +
                         "(%s TEXT PRIMARY KEY," + //documento
-                        "%s TEXT NOT NULL," + //noombre
+                        "%s TEXT NOT NULL," + //nombre
                         "%s INTEGER NOT NULL," + //edad
                         "%s TEXT NOT NULL," + //email
                         "%s TEXT NOT NULL)", //telefono
-                Tablas.Personas, Estructuras.ColumnasPersona.documento,
-                Estructuras.ColumnasPersona.name, Estructuras.ColumnasPersona.edad,
-                Estructuras.ColumnasPersona.email, Estructuras.ColumnasPersona.telefono));
+                Tablas.Personas,
+                Estructuras.ColumnasPersona.documento,
+                Estructuras.ColumnasPersona.name,
+                Estructuras.ColumnasPersona.edad,
+                Estructuras.ColumnasPersona.email,
+                Estructuras.ColumnasPersona.telefono));
 
 
         db.execSQL(String.format("CREATE TABLE %s " +
@@ -44,11 +47,17 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                         "%s TEXT NOT NULL," + //url
                         "%s TEXT NOT NULL," + //documento
                         "foreign key(%s) references %s (%s))" //declaracion llave foranea
-                ,Tablas.Carros, Estructuras.ColumnasCarro.id,
-                Estructuras.ColumnasCarro.name,Estructuras.ColumnasCarro.value,
-                Estructuras.ColumnasCarro.placa,Estructuras.ColumnasCarro.modelo,
-                Estructuras.ColumnasCarro.color, Estructuras.ColumnasCarro.tipo, Estructuras.ColumnasCarro.url,
-                Estructuras.ColumnasCarro.documento,Estructuras.ColumnasCarro.documento,
+                ,Tablas.Carros,
+                Estructuras.ColumnasCarro.id,
+                Estructuras.ColumnasCarro.name,
+                Estructuras.ColumnasCarro.value,
+                Estructuras.ColumnasCarro.placa,
+                Estructuras.ColumnasCarro.modelo,
+                Estructuras.ColumnasCarro.color,
+                Estructuras.ColumnasCarro.tipo,
+                Estructuras.ColumnasCarro.url,
+                Estructuras.ColumnasCarro.documento,
+                Estructuras.ColumnasCarro.documento,//llave foranea
                 Tablas.Personas, Estructuras.ColumnasPersona.documento));
 
 

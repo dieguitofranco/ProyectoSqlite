@@ -15,7 +15,6 @@ import com.df.persistencia.Datos.BaseDatosCarros;
 import com.df.persistencia.Datos.dbPersonas;
 import com.df.persistencia.Model.Persona;
 import com.df.persistencia.R;
-import com.df.persistencia.Views.Activities.Activities.FormularioUsuario;
 import com.df.persistencia.Views.Activities.Adapters.PersonaAdaptador;
 
 import java.util.ArrayList;
@@ -32,8 +31,8 @@ public class Personas extends AppCompatActivity implements View.OnClickListener,
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personas);
-        btnCrear = findViewById(R.id.btnCrear);
-        listaPersona = findViewById(R.id.lstViewPerson);
+        btnCrear = findViewById(R.id.btnCrearPI);
+        listaPersona = findViewById(R.id.lstViewPerI);
         btnCrear.setOnClickListener(this);
         listaPersona.setOnItemClickListener(this);
         listaPersona.setOnItemLongClickListener(this);
@@ -60,7 +59,7 @@ public class Personas extends AppCompatActivity implements View.OnClickListener,
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
-            case R.id.btnCrear:
+            case R.id.btnCrearPI:
                 intent = new Intent(this, FormularioUsuario.class);
                 startActivity(intent);
                 break;

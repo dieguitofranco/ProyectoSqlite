@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.Activities.Activities.Personas">
+    tools:context=".Views.Activities.Activities.Carros">
 
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginTop="36dp"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:text="Personas"
+        android:text="Carros"
         android:textStyle="bold|italic"
         android:textColor="@color/black"
         android:textSize="40dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/lstViewPerI"
+        android:id="@+id/lstViewCarI"
         android:layout_width="409dp"
         android:layout_height="645dp"
         android:layout_marginTop="10dp"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/btnCrearPI"
+        android:id="@+id/btnCrearI"
         android:layout_width="61dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/teal_700"

@@ -23,6 +23,9 @@ public class Carro {
         this.documento = documento;
         this.url = url;
     }
+    public Carro() {
+
+    }
 
     public String getUrl() {
         return url;

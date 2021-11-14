@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import com.df.persistencia.Model.Persona;
 import com.df.persistencia.R;
-import com.squareup.picasso.Picasso;
+//import com.squareup.picasso.Picasso;
 
 public class PersonaAdaptador extends BaseAdapter {
     
@@ -48,19 +48,22 @@ public class PersonaAdaptador extends BaseAdapter {
             LayoutInflater inf = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             v = inf.inflate(R.layout.person_item, null);
         }
+
         Persona person = personas.get(i);
-        TextView textNamePerson = v.findViewById(R.id.textNamePerson);
-        TextView textDocument = v.findViewById(R.id.textDocument);
-        TextView textEdad = v.findViewById(R.id.textEdad);
-        TextView textEmail = v.findViewById(R.id.textEmail);
-        TextView textPhone = v.findViewById(R.id.textPhone);
+
+        TextView textNamePerson = v.findViewById(R.id.textNamePersonI);
+        TextView textDocument = v.findViewById(R.id.textDocumentI);
+        TextView textEdad = v.findViewById(R.id.textEdadI);
+        TextView textEmail = v.findViewById(R.id.textEmailI);
+        TextView textPhone = v.findViewById(R.id.textPhoneI);
         ImageView img = v.findViewById(R.id.imgPerson);
+
         textNamePerson.setText(person.getName());
         textDocument.setText(person.getDocumento());
         textEdad.setText(String.valueOf(person.getEdad()));
         textEmail.setText(person.getEmail());
         textPhone.setText(person.getTelefono());
-        Picasso.get().load("https://thumbs.dreamstime.com/z/icono-de-la-muestra-del-usuario-s%C3%ADmbolo-de-la-persona-avatar-humano-84519083.jpg").into(img);
+       // Picasso.get().load("https://thumbs.dreamstime.com/z/icono-de-la-muestra-del-usuario-s%C3%ADmbolo-de-la-persona-avatar-humano-84519083.jpg").into(img);
 
         return v;
     }
