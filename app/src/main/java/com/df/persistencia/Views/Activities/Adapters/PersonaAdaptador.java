@@ -31,13 +31,13 @@ public class PersonaAdaptador extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int i) {
-        return personas.get(i);
+    public Object getItem(int a) {
+        return personas.get(a);
     }
 
     @Override
-    public long getItemId(int i) {
-        return i;
+    public long getItemId(int a) {
+        return a;
     }
 
     @Override
@@ -49,17 +49,18 @@ public class PersonaAdaptador extends BaseAdapter {
             v = inf.inflate(R.layout.person_item, null);
         }
         Persona person = personas.get(i);
-        TextView textNamePerson = v.findViewById(R.id.textNamePerson);
-        TextView textDocument = v.findViewById(R.id.textDocument);
-        TextView textEdad = v.findViewById(R.id.textEdad);
-        TextView textEmail = v.findViewById(R.id.textEmail);
-        TextView textPhone = v.findViewById(R.id.textPhone);
+        TextView textNamePerson = v.findViewById(R.id.textNamePer);
+        TextView textDocumento = v.findViewById(R.id.textDocumentPer);
+        TextView textEdad = v.findViewById(R.id.textEdadPer);
+        TextView textEmail = v.findViewById(R.id.textEmailPer);
+        TextView textTel = v.findViewById(R.id.textTelper);
         ImageView img = v.findViewById(R.id.imgPerson);
+
         textNamePerson.setText(person.getName());
-        textDocument.setText(person.getDocumento());
+        textDocumento.setText(person.getDocumento());
         textEdad.setText(String.valueOf(person.getEdad()));
         textEmail.setText(person.getEmail());
-        textPhone.setText(person.getTelefono());
+        textTel.setText(person.getTelefono());
         Picasso.get().load("https://thumbs.dreamstime.com/z/icono-de-la-muestra-del-usuario-s%C3%ADmbolo-de-la-persona-avatar-humano-84519083.jpg").into(img);
 
         return v;

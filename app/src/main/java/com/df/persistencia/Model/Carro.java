@@ -9,10 +9,10 @@ public class Carro {
     private int modelo;
     private String color;
     private String tipo;
-    private String documento;
-    private String url;
 
-    public Carro(String id, String name, String value, String placa, int modelo, String color, String tipo, String documento, String url) {
+
+
+    public Carro(String id, String name, String value, String placa, int modelo, String color, String tipo) {
         this.id = id;
         this.name = name;
         this.value = value;
@@ -20,16 +20,12 @@ public class Carro {
         this.modelo = modelo;
         this.color = color;
         this.tipo = tipo;
-        this.documento = documento;
-        this.url = url;
+
+
     }
 
-    public String getUrl() {
-        return url;
-    }
+    public Carro() {
 
-    public void setUrl(String url) {
-        this.url = url;
     }
 
     public String getId() {
@@ -50,6 +46,10 @@ public class Carro {
 
     public String getValue() {
         return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public String getPlaca() {
@@ -84,15 +84,5 @@ public class Carro {
         this.tipo = tipo;
     }
 
-    public String getDocumento() {
-        return documento;
-    }
 
-    public void setDocumento(String documento) {
-        this.documento = documento;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
 }

@@ -10,8 +10,7 @@ public class Estructuras {
         String modelo = "modelo_car";
         String color = "color_car";
         String tipo = "tipo_car";
-        String url = "url_car";
-        String documento = "document_owner";
+
     }
 
     interface ColumnasPersona{

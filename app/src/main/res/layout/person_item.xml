@@ -16,7 +16,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textNamePerson"
+        android:id="@+id/textNamePer"
         android:layout_width="208dp"
         android:layout_height="30dp"
         android:layout_marginStart="10dp"
@@ -32,46 +32,46 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textDocument"
+        android:id="@+id/textDocumentPer"
         android:layout_width="203dp"
         android:layout_height="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:text="Documento"
-        app:layout_constraintEnd_toEndOf="@+id/textNamePerson"
+        app:layout_constraintEnd_toEndOf="@+id/textNamePer"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textNamePerson"
-        app:layout_constraintTop_toBottomOf="@+id/textNamePerson" />
+        app:layout_constraintStart_toStartOf="@+id/textNamePer"
+        app:layout_constraintTop_toBottomOf="@+id/textNamePer" />
 
     <TextView
-        android:id="@+id/textEdad"
+        android:id="@+id/textEdadPer"
         android:layout_width="202dp"
         android:layout_height="25dp"
         android:layout_marginTop="10dp"
         android:text="Edad"
-        app:layout_constraintEnd_toEndOf="@+id/textDocument"
+        app:layout_constraintEnd_toEndOf="@+id/textDocumentPer"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textDocument"
-        app:layout_constraintTop_toBottomOf="@+id/textDocument" />
+        app:layout_constraintStart_toStartOf="@+id/textDocumentPer"
+        app:layout_constraintTop_toBottomOf="@+id/textDocumentPer" />
 
     <TextView
-        android:id="@+id/textEmail"
+        android:id="@+id/textEmailPer"
         android:layout_width="200dp"
         android:layout_height="25dp"
         android:layout_marginTop="8dp"
         android:text="Email"
-        app:layout_constraintEnd_toEndOf="@+id/textEdad"
+        app:layout_constraintEnd_toEndOf="@+id/textEdadPer"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEdad" />
+        app:layout_constraintTop_toBottomOf="@+id/textEdadPer" />
 
     <TextView
-        android:id="@+id/textPhone"
+        android:id="@+id/textTelper"
         android:layout_width="200dp"
         android:layout_height="25dp"
         android:layout_marginTop="10dp"
         android:text="Telefono"
-        app:layout_constraintEnd_toEndOf="@+id/textEmail"
-        app:layout_constraintStart_toStartOf="@+id/textEmail"
-        app:layout_constraintTop_toBottomOf="@+id/textEmail" />
+        app:layout_constraintEnd_toEndOf="@+id/textEmailPer"
+        app:layout_constraintStart_toStartOf="@+id/textEmailPer"
+        app:layout_constraintTop_toBottomOf="@+id/textEmailPer" />
 </androidx.constraintlayout.widget.ConstraintLayout>
