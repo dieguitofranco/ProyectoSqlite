@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.Activities.Activities.Personas">
+    tools:context=".Views.Activities.Activities.Carros">
 
 
     <TextView
@@ -14,8 +14,7 @@
         android:layout_marginTop="36dp"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:text="Personas"
-        android:textStyle="bold|italic"
+        android:text="Carros"
         android:textColor="@color/black"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +22,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/listViewPerson"
         android:layout_width="409dp"
         android:layout_height="645dp"
         android:layout_marginTop="10dp"
@@ -33,14 +31,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/btnCrear"
-        android:layout_width="61dp"
-        android:layout_height="48dp"
+        android:id="@+id/addNewCar"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:backgroundTint="@color/colorAccent"
         android:gravity="center"
         app:icon="@android:drawable/ic_menu_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="@+id/textView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

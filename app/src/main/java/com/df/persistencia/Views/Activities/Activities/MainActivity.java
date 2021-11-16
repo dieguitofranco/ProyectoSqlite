@@ -16,14 +16,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     SharedPreferences preferencias;
     EditText txtName;
     Button btnPersonas;
-
+    private Button btnLinkPersonas;
+    private  Button btnlinkCarros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnPersonas = findViewById(R.id.btnPersonas);
-        btnPersonas.setOnClickListener(this);
+        btnLinkPersonas = findViewById(R.id.btnPersonas);
+        btnLinkPersonas.setOnClickListener(this);
+
+        btnlinkCarros= findViewById(R.id.btnCarros);
+        btnlinkCarros.setOnClickListener(this);
 
 //        preferencias = getSharedPreferences("local", Context.MODE_PRIVATE);
 //        txtName = findViewById(R.id.txtName);
@@ -43,9 +47,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btnPersonas){
-            Intent intent = new Intent(MainActivity.this,  Personas.class);
-            startActivity(intent);
+        Intent intent;
+        switch (v.getId()){
+            case R.id.btnPersonas:
+                intent = new Intent(MainActivity.this, Personas.class);
+                startActivity(intent);
+                break;
+            case R.id.btnCarros:
+                intent = new Intent(MainActivity.this, Carros.class);
+                startActivity(intent);
+                break;
 
         }
     }

@@ -15,7 +15,6 @@ import com.df.persistencia.Datos.BaseDatosCarros;
 import com.df.persistencia.Datos.dbPersonas;
 import com.df.persistencia.Model.Persona;
 import com.df.persistencia.R;
-import com.df.persistencia.Views.Activities.Activities.FormularioUsuario;
 import com.df.persistencia.Views.Activities.Adapters.PersonaAdaptador;
 
 import java.util.ArrayList;
@@ -33,25 +32,25 @@ public class Personas extends AppCompatActivity implements View.OnClickListener,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personas);
         btnCrear = findViewById(R.id.btnCrear);
-        listaPersona = findViewById(R.id.lstViewPerson);
         btnCrear.setOnClickListener(this);
+
+        listaPersona = findViewById(R.id.listViewPerson);
         listaPersona.setOnItemClickListener(this);
         listaPersona.setOnItemLongClickListener(this);
+        updateElements();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         updateElements();
-
-
     }
 
     public void updateElements(){
         BaseDatosCarros dbHelper = new BaseDatosCarros(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         dbp = new dbPersonas(db);
-        personas =dbp.obtenerPersonas();
+        personas =dbp.obtenerPersonas();//en una sola consulta se guarda la infor para usarla en otros métodos
         perAdapter = new PersonaAdaptador(this,personas);
         listaPersona.setAdapter(perAdapter);
     }
@@ -61,16 +60,16 @@ public class Personas extends AppCompatActivity implements View.OnClickListener,
         Intent intent;
         switch (view.getId()) {
             case R.id.btnCrear:
-                intent = new Intent(this, FormularioUsuario.class);
+                intent = new Intent(Personas.this, CrearPersona.class);
                 startActivity(intent);
                 break;
-
         }
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(this, "Ha seleccionado la persona: ", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Ha seleccionado la persona:  "+
+                personas.get(i).getName(), Toast.LENGTH_SHORT).show();
     }
 
 

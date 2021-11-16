@@ -11,9 +11,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Persistencia">
+
         <activity
-            android:name=".Views.Activities.Activities.FormularioUsuario"
+            android:name=".Views.Activities.Activities.Carros"
             android:exported="true" />
+
+        <activity
+            android:name=".Views.Activities.Activities.CrearCarro"
+            android:exported="true"
+            android:label="@string/title_activity_crear_carro"
+            android:theme="@style/AppTheme.ThemePopUp" />
+
+        <activity
+            android:name=".Views.Activities.Activities.CrearPersona"
+            android:exported="true"
+            android:label="@string/title_activity_crear_persona"
+            android:theme="@style/AppTheme.ThemePopUp" />
+
         <activity
             android:name=".Views.Activities.Activities.Personas"
             android:exported="true" />
