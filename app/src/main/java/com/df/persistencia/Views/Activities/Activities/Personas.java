@@ -34,6 +34,7 @@ public class Personas extends AppCompatActivity implements View.OnClickListener,
         setContentView(R.layout.activity_personas);
         btnCrear = findViewById(R.id.btnCrear);
         listaPersona = findViewById(R.id.lstViewPerson);
+
         btnCrear.setOnClickListener(this);
         listaPersona.setOnItemClickListener(this);
         listaPersona.setOnItemLongClickListener(this);

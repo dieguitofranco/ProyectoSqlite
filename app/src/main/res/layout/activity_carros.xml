@@ -4,47 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.Activities.Activities.Personas">
-
+    tools:context=".Views.Activities.Activities.Carros">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="197dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:text="Personas"
+        android:text="Carros"
         android:textColor="@color/black"
         android:textSize="40dp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/lstViewPerson"
-        android:layout_width="410dp"
-        android:layout_height="637dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
     <Button
-        android:id="@+id/btnCrear"
+        android:id="@+id/btnAddCarro"
         android:layout_width="130dp"
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="@color/teal_700"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="?attr/colorSecondaryVariant"
         android:gravity="center"
         android:text="Crear"
         app:icon="@android:drawable/ic_input_add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lstViewCar"
+        android:layout_width="411dp"
+        android:layout_height="637dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

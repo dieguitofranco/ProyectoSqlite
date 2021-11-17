@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgCar"
+        android:layout_width="160dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textNameCar"
+        android:layout_width="208dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Nombre Carro"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imgCar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textValueCar"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textNameCar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textNameCar"
+        app:layout_constraintTop_toBottomOf="@+id/textNameCar"
+        tools:text="Valor Carro" />
+
+    <TextView
+        android:id="@+id/texPlacaCar"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Placa Carro"
+        app:layout_constraintEnd_toEndOf="@+id/textValueCar"
+        app:layout_constraintStart_toStartOf="@+id/textValueCar"
+        app:layout_constraintTop_toBottomOf="@+id/textValueCar" />
+
+    <TextView
+        android:id="@+id/textModelCar"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Modelo Carro"
+        app:layout_constraintEnd_toEndOf="@+id/texPlacaCar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/texPlacaCar"
+        app:layout_constraintTop_toBottomOf="@+id/texPlacaCar" />
+
+    <TextView
+        android:id="@+id/textColorCar"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Color Carro"
+        app:layout_constraintEnd_toEndOf="@+id/textModelCar"
+        app:layout_constraintStart_toStartOf="@+id/textModelCar"
+        app:layout_constraintTop_toBottomOf="@+id/textModelCar" />
+
+    <TextView
+        android:id="@+id/textTypeCar"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Tipo de Carro"
+        app:layout_constraintEnd_toEndOf="@+id/textColorCar"
+        app:layout_constraintStart_toStartOf="@+id/textColorCar"
+        app:layout_constraintTop_toBottomOf="@+id/textColorCar" />
+
+    <TextView
+        android:id="@+id/textDocumentPerson"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Documento Propietario"
+        app:layout_constraintEnd_toEndOf="@+id/textTypeCar"
+        app:layout_constraintStart_toStartOf="@+id/textTypeCar"
+        app:layout_constraintTop_toBottomOf="@+id/textTypeCar" />
+
+    <TextView
+        android:id="@+id/textIdCar"
+        android:layout_width="133dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:text="Id Carro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textTypeCar"
+        app:layout_constraintTop_toBottomOf="@+id/imgCar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
