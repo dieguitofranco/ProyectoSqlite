@@ -50,11 +50,12 @@ public class PersonaAdaptador extends BaseAdapter {
         }
         Persona person = personas.get(i);
         TextView textNamePerson = v.findViewById(R.id.textNamePerson);
-        TextView textDocument = v.findViewById(R.id.textDocument);
+        TextView textDocument = v.findViewById(R.id.textDocument2);
         TextView textEdad = v.findViewById(R.id.textEdad);
         TextView textEmail = v.findViewById(R.id.textEmail);
         TextView textPhone = v.findViewById(R.id.textPhone);
-        ImageView img = v.findViewById(R.id.imgPerson);
+        ImageView img = v.findViewById(R.id.imgCar);
+
         textNamePerson.setText(person.getName());
         textDocument.setText(person.getDocumento());
         textEdad.setText(String.valueOf(person.getEdad()));

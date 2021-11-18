@@ -48,8 +48,8 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                 Estructuras.ColumnasCarro.name,Estructuras.ColumnasCarro.value,
                 Estructuras.ColumnasCarro.placa,Estructuras.ColumnasCarro.modelo,
                 Estructuras.ColumnasCarro.color, Estructuras.ColumnasCarro.tipo, Estructuras.ColumnasCarro.url,
-                Estructuras.ColumnasCarro.documento,Estructuras.ColumnasCarro.documento,
-                Tablas.Personas, Estructuras.ColumnasPersona.documento));
+                Estructuras.ColumnasCarro.documento,Estructuras.ColumnasCarro.documento));
+                //Tablas.Personas, Estructuras.ColumnasPersona.documento
 
 
     }

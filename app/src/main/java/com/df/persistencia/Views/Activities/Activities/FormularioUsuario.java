@@ -45,6 +45,8 @@ public class FormularioUsuario extends AppCompatActivity implements View.OnClick
             p.setName(textNamePerson.getText().toString());
             p.setEmail(textEmail.getText().toString());
             p.setEdad(Integer.parseInt(textEdad.getText().toString()));
+
+
             BaseDatosCarros dbHelper = new BaseDatosCarros(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             dbPersonas dbp = new dbPersonas(db);
