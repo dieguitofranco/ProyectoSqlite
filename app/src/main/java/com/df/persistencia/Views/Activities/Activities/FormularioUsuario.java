@@ -33,6 +33,7 @@ public class FormularioUsuario extends AppCompatActivity implements View.OnClick
         textEmail = findViewById(R.id.txtEmail);
         textPhone = findViewById(R.id.txtTelefono);
         btnAgregar  = findViewById(R.id.btnAgregar);
+
         btnAgregar.setOnClickListener(this);
     }
 

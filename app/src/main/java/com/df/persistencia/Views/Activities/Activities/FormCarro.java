@@ -38,6 +38,7 @@ public class FormCarro extends AppCompatActivity implements View.OnClickListener
         textTypeCarro = findViewById(R.id.textTypeCarro);
         textUrlCarro = findViewById(R.id.textUrlCarro);
         textDocumentPersona = findViewById(R.id.textDocumentPersona);
+        btnAgregarCar = findViewById(R.id.btnAgregarCar);
 
         btnAgregarCar.setOnClickListener(this);
     }
