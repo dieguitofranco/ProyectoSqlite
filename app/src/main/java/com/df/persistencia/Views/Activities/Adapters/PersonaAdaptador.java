@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import com.df.persistencia.Model.Persona;
 import com.df.persistencia.R;
-import com.squareup.picasso.Picasso;
+//import com.squareup.picasso.Picasso;
 
 public class PersonaAdaptador extends BaseAdapter {
     
@@ -60,7 +60,7 @@ public class PersonaAdaptador extends BaseAdapter {
         textEdad.setText(String.valueOf(person.getEdad()));
         textEmail.setText(person.getEmail());
         textPhone.setText(person.getTelefono());
-        Picasso.get().load("https://thumbs.dreamstime.com/z/icono-de-la-muestra-del-usuario-s%C3%ADmbolo-de-la-persona-avatar-humano-84519083.jpg").into(img);
+        //Picasso.get().load("https://thumbs.dreamstime.com/z/icono-de-la-muestra-del-usuario-s%C3%ADmbolo-de-la-persona-avatar-humano-84519083.jpg").into(img);
 
         return v;
     }

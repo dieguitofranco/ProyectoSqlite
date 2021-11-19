@@ -3,7 +3,7 @@ package com.df.persistencia.Model;
 public class Carro {
 
     private String id;
-    private String name;
+    private String nameCarro;
     private String value;
     private String placa;
     private int modelo;
@@ -12,9 +12,9 @@ public class Carro {
     private String documento;
     private String url;
 
-    public Carro(String id, String name, String value, String placa, int modelo, String color, String tipo, String documento, String url) {
+    public Carro(String id, String nameCarro, String value, String placa, int modelo, String color, String tipo, String documento, String url) {
         this.id = id;
-        this.name = name;
+        this.nameCarro = nameCarro;
         this.value = value;
         this.placa = placa;
         this.modelo = modelo;
@@ -22,6 +22,11 @@ public class Carro {
         this.tipo = tipo;
         this.documento = documento;
         this.url = url;
+    }
+
+    public Carro(){
+
+
     }
 
     public String getUrl() {
@@ -41,11 +46,11 @@ public class Carro {
     }
 
     public String getName() {
-        return name;
+        return nameCarro;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.nameCarro = nameCarro;
     }
 
     public String getValue() {
