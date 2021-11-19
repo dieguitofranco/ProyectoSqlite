@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-	<entry key="..\:/Users\tlargo\Proyecto SQLite\ProyectoSqlite\app\src\main\res\layout/activity_carros.xml" value="0.15675675675675677" />
-        <entry key="..\:/Users\tlargo\Proyecto SQLite\ProyectoSqlite\app\src\main\res\layout/activity_main.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users\tlargo\Proyecto SQLite\ProyectoSqlite\app\src\main\res\layout/activity_personas.xml" value="0.23369565217391305" />	
+        <entry key="..\:/Users/mjcorrea/AndroidStudioProjects/ProyectoSqlite/app/src/main/res/layout/activity_carros.xml" value="0.25" />
+        <entry key="..\:/Users/mjcorrea/AndroidStudioProjects/ProyectoSqlite/app/src/main/res/layout/activity_fomulario_carro.xml" value="0.22" />
+        <entry key="..\:/Users/mjcorrea/AndroidStudioProjects/ProyectoSqlite/app/src/main/res/layout/activity_formulario_usuario.xml" value="0.22" />
+        <entry key="..\:/Users/mjcorrea/AndroidStudioProjects/ProyectoSqlite/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/mjcorrea/AndroidStudioProjects/ProyectoSqlite/app/src/main/res/layout/activity_personas.xml" value="0.23369565217391305" />
+        <entry key="..\:/Users/mjcorrea/AndroidStudioProjects/ProyectoSqlite/app/src/main/res/layout/carro_item.xml" value="0.2" />
+        <entry key="..\:/Users/mjcorrea/AndroidStudioProjects/ProyectoSqlite/app/src/main/res/layout/person_item.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_personas.xml" value="0.11525857538937931" />
       </map>
@@ -18,6 +22,3 @@
     <option name="id" value="Android" />
   </component>
 </project>
-
-
-

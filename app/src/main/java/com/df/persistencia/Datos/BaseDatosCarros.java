@@ -24,7 +24,7 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(String.format("CREATE TABLE %s " +
                         "(%s TEXT PRIMARY KEY," + //documento
-                        "%s TEXT NOT NULL" + //noombre
+                        "%s TEXT NOT NULL," + //noombre
                         "%s INTEGER NOT NULL," + //edad
                         "%s TEXT NOT NULL," + //email
                         "%s TEXT NOT NULL)", //telefono
