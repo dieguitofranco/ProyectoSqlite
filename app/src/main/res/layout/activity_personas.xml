@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Personas">
+    tools:context=".Views.Activities.Activities.Personas">
 
 
     <TextView
@@ -15,6 +15,7 @@
         android:fontFamily="cursive"
         android:gravity="center"
         android:text="Personas"
+        android:textStyle="bold|italic"
         android:textColor="@color/black"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
+        android:id="@+id/lstViewPerson"
         android:layout_width="409dp"
         android:layout_height="645dp"
         android:layout_marginTop="10dp"
@@ -31,10 +33,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/black"
+        android:id="@+id/btnCrear"
+        android:layout_width="61dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/teal_700"
         android:gravity="center"
         app:icon="@android:drawable/ic_menu_add"
         app:layout_constraintEnd_toEndOf="parent"

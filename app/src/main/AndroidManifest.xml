@@ -16,9 +16,13 @@
             android:exported="true" />
         <activity
             android:name=".Personas"
+            android:name=".Views.Activities.Activities.FormularioUsuario"
             android:exported="true" />
+        <!--<activity
+            android:name=".Views.Activities.Activities.Personas"
+            android:exported="true" />-->
         <activity
-            android:name=".MainActivity"
+            android:name=".Views.Activities.Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
