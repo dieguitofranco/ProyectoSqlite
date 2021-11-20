@@ -2,14 +2,14 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="200dp"
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="4dp"
     card_view:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="183dp">
 
         <ImageView
             android:id="@+id/imgPerson"
@@ -18,28 +18,17 @@
             android:scaleType="centerCrop"
             card_view:srcCompat="@android:drawable/ic_menu_report_image" />
 
+
         <TextView
             android:id="@+id/textNameCar"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginLeft="58dp"
+            android:layout_marginTop="7dp"
             android:layout_toRightOf="@+id/imgPerson"
             android:text="Name"
             android:textAppearance="?android:attr/textAppearanceLarge" />
-
-
-        <TextView
-            android:id="@+id/textValueCar"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textNameCar"
-            android:layout_alignLeft="@+id/textNameCar"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="3dp"
-            android:text="Document"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
             android:id="@+id/textPlaca"
@@ -48,8 +37,8 @@
             android:layout_below="@+id/textValueCar"
             android:layout_alignLeft="@+id/textValueCar"
             android:layout_marginLeft="2dp"
-            android:layout_marginTop="5dp"
-            android:text="Email"
+            android:layout_marginTop="8dp"
+            android:text="@string/hint_placa_car"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
@@ -59,8 +48,8 @@
             android:layout_below="@id/textPlaca"
             android:layout_alignLeft="@+id/textPlaca"
             android:layout_marginLeft="0dp"
-            android:layout_marginTop="6dp"
-            android:text="Telephone"
+            android:layout_marginTop="10dp"
+            android:text="@string/hint_modelo_car"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
@@ -69,19 +58,51 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/textModelo"
             android:layout_alignLeft="@+id/textModelo"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="8dp"
-            android:text="Edad"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/hint_color_car"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
+        <TextView
+            android:id="@+id/textTipoCar"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textModelo"
+            android:layout_alignLeft="@+id/textColor"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="37dp"
+            android:text="@string/hint_tipo_car"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textValueCar"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNameCar"
+            android:layout_alignLeft="@+id/textNameCar"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/hint_value_car"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textDocumentoOwner"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textModelo"
+            android:layout_alignLeft="@+id/imgPerson"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="37dp"
+            android:text="@string/hint_document_owner"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
         <ImageView
+            android:id="@+id/compartir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/compartir"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:src="@android:drawable/ic_menu_share"
-            android:background="@color/material_blue_grey_800" />
+            android:layout_alignParentBottom="true"
+            android:background="@color/material_blue_grey_800"
+            android:src="@android:drawable/ic_menu_share" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
