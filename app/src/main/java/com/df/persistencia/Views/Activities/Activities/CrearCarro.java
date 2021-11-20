@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,7 +25,7 @@ public class CrearCarro extends AppCompatActivity implements View.OnClickListene
     TextView color;
     TextView tipoCarro;
     TextView urlImagen;
-    Spinner propietario;
+    TextView propietario;
     Button btnAgregar;
 
     @Override
@@ -35,7 +36,7 @@ public class CrearCarro extends AppCompatActivity implements View.OnClickListene
         getWindowManager().getDefaultDisplay().getMetrics(medidas);
         int ancho = medidas.widthPixels;
         int alto = medidas.heightPixels;
-        getWindow().setLayout((int) (ancho*0.8), (int)(alto*0.60));
+        getWindow().setLayout((int) (ancho*0.8), (int)(alto*0.80));
 
         nameCar = findViewById(R.id.campo_name_car);
         valor = findViewById(R.id.campo_value);
@@ -44,6 +45,9 @@ public class CrearCarro extends AppCompatActivity implements View.OnClickListene
         color = findViewById(R.id.campo_color_car);
         tipoCarro = findViewById(R.id.campo_tipo_car);
         urlImagen = findViewById(R.id.campo_url_car);
+        propietario = findViewById(R.id.campo_owner_car);
+        btnAgregar = findViewById(R.id.boton_aceptar);
+        btnAgregar.setOnClickListener(this);
         //propietario pdte el spinner
     }
 
@@ -58,10 +62,14 @@ public class CrearCarro extends AppCompatActivity implements View.OnClickListene
             car.setModelo(Integer.parseInt(modelo.getText().toString()));
             car.setColor(color.getText().toString());
             car.setTipo(tipoCarro.getText().toString());
+            car.setUrl(urlImagen.getText().toString());
+            car.setDocumento(propietario.getText().toString());
             BaseDatosCarros dbHelper = new BaseDatosCarros(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             dbCarros dbcar = new dbCarros(db);
             dbcar.insertCar(car);
+            Toast.makeText(this, "Ha Carro agregado :  "+
+                    car.getDocumento() + car.getName(), Toast.LENGTH_SHORT).show();
             finish();
         }
     }

@@ -45,9 +45,13 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                         "%s TEXT NOT NULL," + //documento
                         "foreign key(%s) references %s (%s))" //declaracion llave foranea
                 ,Tablas.Carros, Estructuras.ColumnasCarro.id,
-                Estructuras.ColumnasCarro.name,Estructuras.ColumnasCarro.value,
-                Estructuras.ColumnasCarro.placa,Estructuras.ColumnasCarro.modelo,
-                Estructuras.ColumnasCarro.color, Estructuras.ColumnasCarro.tipo, Estructuras.ColumnasCarro.url,
+                Estructuras.ColumnasCarro.name,
+                Estructuras.ColumnasCarro.value,
+                Estructuras.ColumnasCarro.placa,
+                Estructuras.ColumnasCarro.modelo,
+                Estructuras.ColumnasCarro.color,
+                Estructuras.ColumnasCarro.tipo,
+                Estructuras.ColumnasCarro.url,
                 Estructuras.ColumnasCarro.documento,Estructuras.ColumnasCarro.documento,
                 Tablas.Personas, Estructuras.ColumnasPersona.documento));
 

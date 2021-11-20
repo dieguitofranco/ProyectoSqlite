@@ -35,18 +35,6 @@ public class dbCarros {
         db.close();
     }
 
-    public int conteoCarros(){
-        int conteo = 0;
-        Cursor c = db.rawQuery("Select count(*) as conteo from carros", null);
-        if (c != null ){
-            c.moveToFirst();
-            do{
-                conteo = c.getInt(c.getColumnIndex("conteo"));
-            }while (c.moveToNext());
-        }
-        c.close();
-        return  conteo;
-    }
 
     public ArrayList<Carro> obtenerCarros(){
         ArrayList<Carro> carros = new ArrayList<>( );

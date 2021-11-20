@@ -19,7 +19,7 @@ import com.df.persistencia.Views.Activities.Adapters.PersonaAdaptador;
 
 import java.util.ArrayList;
 
-public class Personas extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
+public class Personas extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener{
 
     private Button btnCrear;
     private ListView listaPersona;
@@ -36,7 +36,6 @@ public class Personas extends AppCompatActivity implements View.OnClickListener,
 
         listaPersona = findViewById(R.id.listViewPerson);
         listaPersona.setOnItemClickListener(this);
-        listaPersona.setOnItemLongClickListener(this);
         updateElements();
     }
 
@@ -72,11 +71,13 @@ public class Personas extends AppCompatActivity implements View.OnClickListener,
                 personas.get(i).getName(), Toast.LENGTH_SHORT).show();
     }
 
-
+/*
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
         dbp.deletePersona(personas.get(position).getDocumento());
         updateElements();
         return false;
     }
+    */
+
 }

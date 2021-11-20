@@ -247,7 +247,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp">
 
-            <Spinner
+            <EditText
                 android:id="@+id/campo_owner_car"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

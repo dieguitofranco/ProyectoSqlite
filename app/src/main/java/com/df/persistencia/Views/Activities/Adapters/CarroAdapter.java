@@ -61,9 +61,9 @@ public class CarroAdapter extends  BaseAdapter{
         textValueCar.setText(car.getValue());
         textColorCar.setText(car.getColor());
         textPlacaCar.setText(car.getPlaca());
-        textModeloCar.setText(car.getModelo());
+        textModeloCar.setText(String.valueOf(car.getModelo()));
         textPropietario.setText(car.getDocumento());
-        Picasso.get().load("").into(img);
+        //Picasso.get().load("").into(img);
 
         return v;
     }

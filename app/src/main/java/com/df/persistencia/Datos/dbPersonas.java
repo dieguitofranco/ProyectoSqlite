@@ -34,18 +34,7 @@ public class dbPersonas {
         db.close();
     }
 
-    public int conteoPersonas(){
-        int conteo = 0;
-        Cursor c = db.rawQuery("Select count(*) as conteo from personas", null);
-        if (c != null ){
-            c.moveToFirst();
-            do{
-                conteo = c.getInt(c.getColumnIndex("conteo"));
-            }while (c.moveToNext());
-        }
-        c.close();
-        return  conteo;
-    }
+
 
     public ArrayList<Persona> obtenerPersonas(){
         ArrayList<Persona> personas = new ArrayList<>( );

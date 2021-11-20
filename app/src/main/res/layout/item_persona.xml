@@ -20,7 +20,7 @@
 
         <TextView
             android:id="@+id/textNameCar"
-            android:layout_width="130dp"
+            android:layout_width="245dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="24dp"
@@ -32,7 +32,7 @@
 
         <TextView
             android:id="@+id/textValueCar"
-            android:layout_width="130dp"
+            android:layout_width="246dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textNameCar"
             android:layout_alignLeft="@+id/textNameCar"
@@ -43,7 +43,7 @@
 
         <TextView
             android:id="@+id/textPlaca"
-            android:layout_width="130dp"
+            android:layout_width="243dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textValueCar"
             android:layout_alignLeft="@+id/textValueCar"
@@ -54,7 +54,7 @@
 
         <TextView
             android:id="@+id/textModelo"
-            android:layout_width="130dp"
+            android:layout_width="219dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/textPlaca"
             android:layout_alignLeft="@+id/textPlaca"
@@ -65,12 +65,12 @@
 
         <TextView
             android:id="@+id/textColor"
-            android:layout_width="130dp"
+            android:layout_width="84dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/textModelo"
             android:layout_alignLeft="@+id/textModelo"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="4dp"
             android:text="Edad"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
