@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnPersonas;
     private Button btnLinkPersonas;
     private  Button btnlinkCarros;
+    private  Button btnLinkVendedores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnlinkCarros= findViewById(R.id.btnCarros);
         btnlinkCarros.setOnClickListener(this);
+
+        btnLinkVendedores = findViewById(R.id.btnVendedores);
+        btnLinkVendedores.setOnClickListener(this);
 
 //        preferencias = getSharedPreferences("local", Context.MODE_PRIVATE);
 //        txtName = findViewById(R.id.txtName);
@@ -57,7 +61,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(MainActivity.this, Carros.class);
                 startActivity(intent);
                 break;
-
+            case R.id.btnVendedores:
+                intent = new Intent(MainActivity.this, Vendedores.class);
+                startActivity(intent);
+                break;
         }
     }
 }

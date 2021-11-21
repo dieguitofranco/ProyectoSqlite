@@ -23,13 +23,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_cliente" />
+            android:src="@drawable/ic_cliente"
+            tools:srcCompat="@drawable/user" />
 
-
-        android:id="@+id/til_nombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp">
 
         <EditText
             android:id="@+id/campo_nombre"
@@ -53,15 +49,11 @@
         <ImageView
             android:id="@+id/img_documento"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_telefono" />
+            android:src="@drawable/ic_telefono"
+            tools:srcCompat="@drawable/tarjeta_de_identificacion" />
 
-
-        android:id="@+id/txt_documento"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp">
 
         <EditText
             android:id="@+id/campo_documento"
@@ -84,15 +76,11 @@
         <ImageView
             android:id="@+id/img_edad"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_telefono" />
+            android:src="@drawable/ic_telefono"
+            app:srcCompat="@drawable/calendar" />
 
-
-        android:id="@+id/txt_edad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp">
 
         <EditText
             android:id="@+id/campo_edad"
@@ -117,13 +105,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_telefono" />
+            android:src="@drawable/ic_telefono"
+            tools:srcCompat="@drawable/telephone" />
 
-
-        android:id="@+id/til_telefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp">
 
         <EditText
             android:id="@+id/campo_telefono"
@@ -151,13 +135,9 @@
             android:layout_column="0"
             android:layout_below="@+id/img_correo"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_correo" />
+            android:src="@drawable/ic_correo"
+            tools:srcCompat="@drawable/email" />
 
-
-        android:id="@+id/til_correo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp">
 
         <EditText
             android:id="@+id/campo_correo"

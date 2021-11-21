@@ -1,5 +1,7 @@
 package com.df.persistencia.Views.Activities.Activities;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -53,6 +55,8 @@ public class CrearPersona extends AppCompatActivity implements View.OnClickListe
             dbPersonas dbp = new dbPersonas(db);
             dbp.insertPerson(p);
             finish();
+            Intent intent = new Intent(CrearPersona.this, Personas.class);
+            startActivity(intent);
         }
     }
 }

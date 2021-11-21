@@ -27,7 +27,7 @@ public class dbCarros {
         cv.put(Estructuras.ColumnasCarro.tipo, c.getTipo());
         cv.put(Estructuras.ColumnasCarro.url, c.getUrl());
         cv.put(Estructuras.ColumnasCarro.documento,c.getDocumento());
-        cv.put(Estructuras.ColumnasCarro.documento_v,c.getDocumento_vendedor());
+        cv.put(Estructuras.ColumnasCarro.vendedor,c.getDocumento_vendedor());
         db.insert(BaseDatosCarros.Tablas.Carros,null, cv);
     }
 
@@ -52,7 +52,7 @@ public class dbCarros {
                 car.setTipo(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.tipo)));
                 car.setUrl(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.url)));
                 car.setDocumento(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.documento)));
-                car.setDocumento_vendedor(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.documento_v)));
+                car.setDocumento_vendedor(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.vendedor)));
 
                 carros.add(car);
             }while (c.moveToNext());

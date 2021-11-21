@@ -38,8 +38,8 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
 
         db.execSQL(String.format("CREATE TABLE %s " +
                 "(%s TEXT PRIMARY KEY," + //documento
-                        "%s TEXT NOT NULL" + //nombre
-                        "%s TEXT NOT NULL" + //oficina
+                        "%s TEXT NOT NULL," + //nombre
+                        "%s TEXT NOT NULL," + //oficina
                         "%s TEXT NULL)", //telefono
                 Tablas.Vendedores,
                 Estructuras.ColumnasVendedor.documento,
@@ -49,7 +49,7 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
         ));
         db.execSQL(String.format("CREATE TABLE %s " +
                         "(%s INTEGER PRIMARY KEY AUTOINCREMENT," + //id
-                        "%s TEXT NOT NULL, " +  //name
+                        "%s TEXT NOT NULL," +  //name
                         "%s TEXT NOT NULL," + //value
                         "%s TEXT NOT NULL," + //placa
                         "%s INTEGER NOT NULL," + //modelo
@@ -59,8 +59,9 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                         "%s TEXT NOT NULL," + //documento propietario
                         "foreign key(%s) references %s (%s))," + //declaracion llave foranea
                         "%s TEXT NOT NULL," + //documento vendedor
-                        "foreign key(%s) references %s (%s))"  //declaracion llave foranea
-                ,Tablas.Carros, Estructuras.ColumnasCarro.id,
+                        "foreign key(%s) references %s (%s))",  //declaracion llave foranea
+                Tablas.Carros,
+                Estructuras.ColumnasCarro.id,
                 Estructuras.ColumnasCarro.name,
                 Estructuras.ColumnasCarro.value,
                 Estructuras.ColumnasCarro.placa,
@@ -70,7 +71,7 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                 Estructuras.ColumnasCarro.url,
                 Estructuras.ColumnasCarro.documento,Estructuras.ColumnasCarro.documento,
                 Tablas.Personas, Estructuras.ColumnasPersona.documento,
-                Estructuras.ColumnasCarro.documento_v,Estructuras.ColumnasCarro.documento_v,
+                Estructuras.ColumnasCarro.vendedor, Estructuras.ColumnasCarro.vendedor,
                 Tablas.Vendedores, Estructuras.ColumnasVendedor.documento
         ));
     }

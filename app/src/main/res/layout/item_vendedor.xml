@@ -3,6 +3,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="150dp"
+
     android:layout_margin="5dp"
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="4dp"
@@ -13,66 +14,55 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imgPerson"
+            android:id="@+id/img_vendedor"
             android:layout_width="115dp"
             android:layout_height="132dp"
             android:scaleType="centerCrop"
-            card_view:srcCompat="@drawable/boss" />
+            card_view:srcCompat="@drawable/businessman" />
 
         <TextView
-            android:id="@+id/textName"
+            android:id="@+id/textNameVendedor"
             android:layout_width="245dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="6dp"
-            android:layout_toRightOf="@+id/imgPerson"
+            android:layout_toRightOf="@+id/img_vendedor"
             android:text="Name"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
         <TextView
-            android:id="@+id/textDocumento"
+            android:id="@+id/textDocumentoVendedor"
             android:layout_width="246dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textName"
-            android:layout_alignLeft="@+id/textName"
+            android:layout_below="@+id/textNameVendedor"
+            android:layout_alignLeft="@+id/textNameVendedor"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="3dp"
             android:text="Document"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
-            android:id="@+id/textEmail"
+            android:id="@+id/textOficina"
             android:layout_width="243dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textDocumento"
-            android:layout_alignLeft="@+id/textDocumento"
+            android:layout_below="@+id/textDocumentoVendedor"
+            android:layout_alignLeft="@+id/textDocumentoVendedor"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="5dp"
-            android:text="Email"
+            android:text="Oficina"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
-            android:id="@+id/textTelefono"
+            android:id="@+id/textTelefonoVendedor"
             android:layout_width="219dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textEmail"
-            android:layout_alignLeft="@+id/textEmail"
+            android:layout_below="@id/textOficina"
+            android:layout_alignLeft="@+id/textOficina"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="6dp"
             android:text="Telephone"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/textEdad"
-            android:layout_width="84dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textTelefono"
-            android:layout_alignLeft="@+id/textTelefono"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="4dp"
-            android:text="Edad"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <ImageView

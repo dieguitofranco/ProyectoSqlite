@@ -1,5 +1,6 @@
 package com.df.persistencia.Views.Activities.Activities;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -71,9 +72,9 @@ public class CrearCarro extends AppCompatActivity implements View.OnClickListene
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             dbCarros dbcar = new dbCarros(db);
             dbcar.insertCar(car);
-            Toast.makeText(this, "Ha Carro agregado :  "+
-                    car.getDocumento() + car.getName(), Toast.LENGTH_SHORT).show();
             finish();
+            Intent intent = new Intent(CrearCarro.this, Carros.class);
+            startActivity(intent);
         }
     }
 }

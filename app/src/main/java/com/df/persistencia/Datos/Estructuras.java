@@ -12,7 +12,7 @@ public class Estructuras {
         String tipo = "tipo_car";
         String url = "url_car";
         String documento = "document_owner";
-        String documento_v = "document_vendedor";
+        String vendedor = "vendedor";
     }
 
     interface ColumnasPersona{

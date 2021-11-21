@@ -12,9 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import com.df.persistencia.Model.Carro;
-import com.df.persistencia.Model.Persona;
 import com.df.persistencia.R;
-import com.squareup.picasso.Picasso;
 
 public class CarroAdapter extends  BaseAdapter{
 
@@ -49,11 +47,11 @@ public class CarroAdapter extends  BaseAdapter{
             v = inf.inflate(R.layout.item_carro, null);
         }
         Carro car = carros.get(i);
-        TextView textNameCar = v.findViewById(R.id.textNameCar);
-        TextView textValueCar = v.findViewById(R.id.textValueCar);
-        TextView textColorCar = v.findViewById(R.id.textColor);
-        TextView textPlacaCar = v.findViewById(R.id.textPlaca);
-        TextView textModeloCar = v.findViewById(R.id.textModelo);
+        TextView textNameCar = v.findViewById(R.id.textNameVendedor);
+        TextView textValueCar = v.findViewById(R.id.textDocumentoVendedor);
+        TextView textColorCar = v.findViewById(R.id.textEdad);
+        TextView textPlacaCar = v.findViewById(R.id.textOficina);
+        TextView textModeloCar = v.findViewById(R.id.textTelefonoVendedor);
         TextView textPropietario = v.findViewById(R.id.textDocumentoOwner);
         ImageView img = v.findViewById(R.id.imgPerson);
 
