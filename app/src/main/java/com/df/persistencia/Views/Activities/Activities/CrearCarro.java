@@ -26,6 +26,7 @@ public class CrearCarro extends AppCompatActivity implements View.OnClickListene
     TextView tipoCarro;
     TextView urlImagen;
     TextView propietario;
+    TextView vendedor;
     Button btnAgregar;
 
     @Override
@@ -46,6 +47,7 @@ public class CrearCarro extends AppCompatActivity implements View.OnClickListene
         tipoCarro = findViewById(R.id.campo_tipo_car);
         urlImagen = findViewById(R.id.campo_url_car);
         propietario = findViewById(R.id.campo_owner_car);
+        vendedor = findViewById(R.id.campo_vendedor);
         btnAgregar = findViewById(R.id.boton_aceptar);
         btnAgregar.setOnClickListener(this);
         //propietario pdte el spinner
@@ -64,6 +66,7 @@ public class CrearCarro extends AppCompatActivity implements View.OnClickListene
             car.setTipo(tipoCarro.getText().toString());
             car.setUrl(urlImagen.getText().toString());
             car.setDocumento(propietario.getText().toString());
+            car.setDocumento_vendedor(vendedor.getText().toString());
             BaseDatosCarros dbHelper = new BaseDatosCarros(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             dbCarros dbcar = new dbCarros(db);

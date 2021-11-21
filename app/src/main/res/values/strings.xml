@@ -15,6 +15,7 @@
     <string name="hint_tipo_car">Tipo de carro</string>
     <string name="hint_url_car">Imagen</string>
     <string name="hint_document_owner">Propietario</string>
+    <string name="hint_vendedor">Vendedor</string>
 
     <string name="accion_cancelar">Cancelar</string>
     <string name="accion_aceptar">Aceptar</string>

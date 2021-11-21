@@ -11,8 +11,9 @@ public class Carro {
     private String tipo;
     private String url;
     private String documento;
+    private String documento_vendedor;
 
-    public Carro(String id, String name, String value, String placa, int modelo, String color, String tipo, String url, String documento) {
+    public Carro(String id, String name, String value, String placa, int modelo, String color, String tipo, String url, String documento, String documento_vendedor) {
         this.id = id;
         this.name = name;
         this.value = value;
@@ -22,6 +23,7 @@ public class Carro {
         this.tipo = tipo;
         this.url = url;
         this.documento = documento;
+        this.documento_vendedor = documento_vendedor;
     }
 
     public Carro() {
@@ -98,5 +100,13 @@ public class Carro {
 
     public void setDocumento(String documento) {
         this.documento = documento;
+    }
+
+    public  String getDocumento_vendedor(){
+        return documento_vendedor;
+    }
+
+    public void setDocumento_vendedor (String documento_vendedor){
+        this.documento_vendedor = documento_vendedor;
     }
 }
