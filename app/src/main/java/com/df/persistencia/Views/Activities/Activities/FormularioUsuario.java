@@ -22,7 +22,6 @@ public class FormularioUsuario extends AppCompatActivity implements View.OnClick
     TextView textPhone ;
     Button btnAgregar ;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

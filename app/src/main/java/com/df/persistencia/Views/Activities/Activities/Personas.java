@@ -15,7 +15,6 @@ import com.df.persistencia.Datos.BaseDatosCarros;
 import com.df.persistencia.Datos.dbPersonas;
 import com.df.persistencia.Model.Persona;
 import com.df.persistencia.R;
-import com.df.persistencia.Views.Activities.Activities.FormularioUsuario;
 import com.df.persistencia.Views.Activities.Adapters.PersonaAdaptador;
 
 import java.util.ArrayList;
@@ -44,15 +43,13 @@ public class Personas extends AppCompatActivity implements View.OnClickListener,
     protected void onStart() {
         super.onStart();
         updateElements();
-
-
     }
 
     public void updateElements(){
         BaseDatosCarros dbHelper = new BaseDatosCarros(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         dbp = new dbPersonas(db);
-        personas =dbp.obtenerPersonas();
+        personas = dbp.obtenerPersonas();
         perAdapter = new PersonaAdaptador(this,personas);
         listaPersona.setAdapter(perAdapter);
     }
@@ -71,12 +68,15 @@ public class Personas extends AppCompatActivity implements View.OnClickListener,
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(this, "Ha seleccionado la persona: ", Toast.LENGTH_SHORT).show();
+        Persona personaSelect = personas.get(i);
+        Toast.makeText(this, "Ha seleccionado la persona: " + personaSelect.getName(), Toast.LENGTH_SHORT).show();
     }
 
 
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+        Persona personaSelect = personas.get(position);
+        Toast.makeText(this, "Se ha eliminado la persona: " + personaSelect.getName(), Toast.LENGTH_SHORT).show();
         dbp.deletePersona(personas.get(position).getDocumento());
         updateElements();
         return false;

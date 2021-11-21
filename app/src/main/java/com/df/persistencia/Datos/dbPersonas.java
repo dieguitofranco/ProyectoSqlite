@@ -1,11 +1,8 @@
 package com.df.persistencia.Datos;
 
-import android.app.Person;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
-import android.widget.Toast;
 
 import com.df.persistencia.Model.Persona;
 

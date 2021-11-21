@@ -48,6 +48,7 @@ public class PersonaAdaptador extends BaseAdapter {
             LayoutInflater inf = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             v = inf.inflate(R.layout.person_item, null);
         }
+
         Persona person = personas.get(i);
         TextView textNamePerson = v.findViewById(R.id.textNamePerson);
         TextView textDocument = v.findViewById(R.id.textDocument);
@@ -55,6 +56,7 @@ public class PersonaAdaptador extends BaseAdapter {
         TextView textEmail = v.findViewById(R.id.textEmail);
         TextView textPhone = v.findViewById(R.id.textPhone);
         ImageView img = v.findViewById(R.id.imgPerson);
+
         textNamePerson.setText(person.getName());
         textDocument.setText(person.getDocumento());
         textEdad.setText(String.valueOf(person.getEdad()));

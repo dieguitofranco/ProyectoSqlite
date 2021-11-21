@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText txtName;
     Button btnPersonas;
     Button btnCarros;
-
+    Button btnSeller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +25,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         btnPersonas = findViewById(R.id.btnPersonas);
         btnCarros = findViewById(R.id.btnCarros);
+        btnSeller = findViewById(R.id.btnSeller);
 
         btnPersonas.setOnClickListener(this);
         btnCarros.setOnClickListener(this);
-
+        btnSeller.setOnClickListener(this);
 
 //        preferencias = getSharedPreferences("local", Context.MODE_PRIVATE);
 //        txtName = findViewById(R.id.txtName);
@@ -42,8 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        dbPersonas dbp = new dbPersonas(db);
 //       // dbp.insertPerson(per);
 //        Toast.makeText(this,"la cantidad de personas son:" + dbp.conteoPersonas(), Toast.LENGTH_SHORT).show();
-
-
     }
 
     @Override
@@ -56,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnCarros:
                 intent = new Intent(this, Carros.class);
+                startActivity(intent);
+                break;
+            case R.id.btnSeller:
+                intent = new Intent(this, vendedores.class);
                 startActivity(intent);
                 break;
         }

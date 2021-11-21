@@ -19,7 +19,7 @@ public class dbCarros {
 
     public void insertCar(Carro c){
         ContentValues cv = new ContentValues();
-        cv.put(Estructuras.ColumnasCarro.id,c.getId());
+        //cv.put(Estructuras.ColumnasCarro.id,c.getId());
         cv.put(Estructuras.ColumnasCarro.name,c.getName());
         cv.put(Estructuras.ColumnasCarro.value, c.getValue());
         cv.put(Estructuras.ColumnasCarro.placa, c.getPlaca());

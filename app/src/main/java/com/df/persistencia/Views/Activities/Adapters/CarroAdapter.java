@@ -49,6 +49,7 @@ public class CarroAdapter extends BaseAdapter {
             v = inf.inflate(R.layout.car_item, null);
         }
         Carro car = carros.get(i);
+        TextView textIdCar = v.findViewById(R.id.textIdCar);
         TextView textNameCar = v.findViewById(R.id.textNameCar);
         TextView textValue = v.findViewById(R.id.textValueCar);
         TextView textPlaca = v.findViewById(R.id.texPlacaCar);
@@ -58,10 +59,11 @@ public class CarroAdapter extends BaseAdapter {
         TextView textDocument = v.findViewById(R.id.textDocumentPerson);
         ImageView img = v.findViewById(R.id.imgCar);
 
+        textIdCar.setText(car.getId());
         textNameCar.setText(car.getName());
         textValue.setText(String.valueOf(car.getValue()));
         textPlaca.setText(car.getPlaca());
-        textModel.setText(car.getModelo());
+        textModel.setText(String.valueOf(car.getModelo()));
         textColor.setText(car.getColor());
         textType.setText(car.getTipo());
         textDocument.setText(car.getDocumento());

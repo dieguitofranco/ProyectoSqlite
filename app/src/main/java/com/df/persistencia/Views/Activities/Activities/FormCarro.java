@@ -56,6 +56,7 @@ public class FormCarro extends AppCompatActivity implements View.OnClickListener
             c.setTipo(textTypeCarro.getText().toString());
             c.setDocumento(textDocumentPersona.getText().toString());
             c.setUrl(textUrlCarro.getText().toString());
+
             BaseDatosCarros dbHelper = new BaseDatosCarros(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             dbCarros dbc = new dbCarros(db);

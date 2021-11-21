@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgSeller"
+        android:layout_width="160dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textNameSeller"
+        android:layout_width="208dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Nombre"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imgSeller"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textDocumentSeller"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:text="Documento"
+        app:layout_constraintEnd_toEndOf="@+id/textNameSeller"
+        app:layout_constraintStart_toStartOf="@+id/textNameSeller"
+        app:layout_constraintTop_toBottomOf="@+id/textNameSeller" />
+
+    <TextView
+        android:id="@+id/textEdadSeller"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Edad"
+        app:layout_constraintEnd_toEndOf="@+id/textDocumentSeller"
+        app:layout_constraintStart_toStartOf="@+id/textDocumentSeller"
+        app:layout_constraintTop_toBottomOf="@+id/textDocumentSeller" />
+
+    <TextView
+        android:id="@+id/textEmailSeller"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Email"
+        app:layout_constraintEnd_toEndOf="@+id/textEdadSeller"
+        app:layout_constraintStart_toStartOf="@+id/textEdadSeller"
+        app:layout_constraintTop_toBottomOf="@+id/textEdadSeller" />
+
+    <TextView
+        android:id="@+id/textPhoneSeller"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Telefono"
+        app:layout_constraintEnd_toEndOf="@+id/textEmailSeller"
+        app:layout_constraintStart_toStartOf="@+id/textEmailSeller"
+        app:layout_constraintTop_toBottomOf="@+id/textEmailSeller" />
+
+    <TextView
+        android:id="@+id/textSellerCar"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Vendedor Carro"
+        app:layout_constraintEnd_toEndOf="@+id/textPhoneSeller"
+        app:layout_constraintStart_toStartOf="@+id/textPhoneSeller"
+        app:layout_constraintTop_toBottomOf="@+id/textPhoneSeller" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
