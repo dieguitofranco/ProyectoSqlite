@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/activity_carros.xml" value="0.2957427536231884" />
-        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/activity_formulario_carro.xml" value="0.2957427536231884" />
-        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/activity_formulario_usuario.xml" value="0.2957427536231884" />
+        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/activity_carros.xml" value="0.1" />
+        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/activity_formulario_carro.xml" value="0.1" />
+        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/activity_formulario_usuario.xml" value="0.33" />
+        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/activity_formulario_vendedor.xml" value="0.33" />
         <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
-        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/activity_personas.xml" value="0.2957427536231884" />
-        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/car_item.xml" value="0.2957427536231884" />
-        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/person_item.xml" value="0.2957427536231884" />
+        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/activity_personas.xml" value="0.5" />
+        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/activity_vendedor.xml" value="0.25" />
+        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/car_item.xml" value="0.25" />
+        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/person_item.xml" value="0.25" />
+        <entry key="..\:/Universidad/Sexto semestre/Disp Mov/SQLITE/ProyectoSqlite/app/src/main/res/layout/vendor_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/USUARIO/Documents/ING_INFORMATICA/Cuarto_Semestre/Prog_Moviles/ProyectoSqlite/ProyectoSqlite/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USUARIO/Documents/ING_INFORMATICA/Cuarto_Semestre/Prog_Moviles/ProyectoSqlite/ProyectoSqlite/app/src/main/res/layout/activity_personas.xml" value="0.33" />
         <entry key="..\:/Users/USUARIO/Documents/ING_INFORMATICA/Cuarto_Semestre/Prog_Moviles/ProyectoSqlite/ProyectoSqlite/app/src/main/res/layout/person_item.xml" value="0.36666666666666664" />

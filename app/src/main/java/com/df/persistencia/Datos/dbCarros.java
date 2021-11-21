@@ -33,7 +33,7 @@ public class dbCarros {
  db.insert(BaseDatosCarros.Tablas.Carros,null, vc);
 }
     public void deleteCarro(String PL){
-        db.delete(BaseDatosCarros.Tablas.Carros,Estructuras.ColumnasCarro.placa + "=?",new String[] {PL});
+        db.delete(BaseDatosCarros.Tablas.Carros,Estructuras.ColumnasCarro.id + "=?",new String[] {PL});
         db.close();
     }
 

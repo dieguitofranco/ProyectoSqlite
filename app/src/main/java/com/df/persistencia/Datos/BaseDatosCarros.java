@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BaseDatosCarros extends SQLiteOpenHelper {
 
     private static final String DATA_BASE_NAME = "carros.db";
-    private static final int ACTUAL_VERSION = 4;
+    private static final int ACTUAL_VERSION = 5;
     private final Context context;
 
     public BaseDatosCarros(Context context) {
@@ -18,6 +18,7 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
     interface Tablas{
         String Carros = "carros";
         String Personas = "personas";
+        String Vendedores = "vendedores";
     }
 
     @Override
@@ -47,12 +48,24 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                 Estructuras.ColumnasCarro.color, Estructuras.ColumnasCarro.tipo));
 
 
+        db.execSQL(String.format("CREATE TABLE %s " +
+                        "(%s TEXT PRIMARY KEY," + //documento
+                        "%s TEXT NOT NULL," + //nombre
+                        "%s TEXT NOT NULL," + //email
+                        "%s TEXT NOT NULL)", //telefono
+                Tablas.Vendedores, Estructuras.ColumnasVendedor.documento,
+                Estructuras.ColumnasVendedor.name,
+                Estructuras.ColumnasVendedor.email,
+                Estructuras.ColumnasVendedor.telefono));
+
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Carros);
         db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Personas);
+        db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Vendedores);
         onCreate(db);
     }
 }
