@@ -26,7 +26,7 @@ public class dbCarros {
         cv.put(Estructuras.ColumnasCarro.modelo, c.getModelo());
         cv.put(Estructuras.ColumnasCarro.placa, c.getPlaca());
         cv.put(Estructuras.ColumnasCarro.value, c.getValue());
-        cv.put(Estructuras.ColumnasCarro.url, c.getUrl());
+       // cv.put(Estructuras.ColumnasCarro.url, c.getUrl());
        // db.insert(BaseDatosCarros.Tablas.Personas,null, cv);
     }
 
@@ -65,7 +65,7 @@ public class dbCarros {
                 car.setPlaca(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.placa)));
                 car.setTipo(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.tipo)));
                 car.setValue(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.value)));
-                car.setUrl(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.url)));
+              //  car.setUrl(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.url)));
                 carros.add(car);
             }while (c.moveToNext());
         }

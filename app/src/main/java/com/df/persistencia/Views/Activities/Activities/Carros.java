@@ -43,8 +43,6 @@ public class Carros extends AppCompatActivity implements View.OnClickListener, A
     protected void onStart() {
         super.onStart();
         updateElements();
-
-
     }
 
     public void updateElements(){

@@ -13,20 +13,26 @@ import com.df.persistencia.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    SharedPreferences preferencias;
-    EditText txtName;
+   // SharedPreferences preferencias;
+    //EditText txtName;
     Button btnPersonas;
     Button btnCarros;
+    Button btnVends;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         btnPersonas = findViewById(R.id.btnPersonasI);
         btnCarros = findViewById(R.id.btnCarrosI);
+        btnVends = findViewById(R.id.btnVendedoresI);
+
         btnPersonas.setOnClickListener(this);
         btnCarros.setOnClickListener(this);
+        btnVends.setOnClickListener(this);
+
 
 //        preferencias = getSharedPreferences("local", Context.MODE_PRIVATE);
 //        txtName = findViewById(R.id.txtName);
@@ -43,29 +49,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v) {
-        // if (v.getId() == R.id.btnPersonas){
-        //      Intent intent = new Intent(MainActivity.this,  Personas.class);
-        //    startActivity(intent);
-        // }
-        Intent intent;
-        switch (v.getId()) {
-            case R.id.btnPersonasI:
-                // Toast.makeText(this,"IMC",Toast.LENGTH_SHORT).show();
-                intent = new Intent(MainActivity.this, Personas.class);
-                // intent.putExtra("nombreUsuario",TxtNombre.getText().toString());
+    public void onClick(View view) {
+       // Intent intent;
+        //switch (view.getId()) {
+          //  case R.id.btnPersonasI:
+            //    intent = new Intent(this, Personas.class);
+              //  startActivity(intent);
+                //break;
+            //case R.id.btnCarrosI:
+              //  intent = new Intent(this, Carros.class);
+                //startActivity(intent);
+                //break;
+            if (view.getId() == R.id.btnPersonasI){
+                Intent intent = new Intent(MainActivity.this,  Personas.class);
                 startActivity(intent);
-                break;
-            case R.id.btnCarrosI:
-                // Toast.makeText(this,"Conversor",Toast.LENGTH_SHORT).show();
-                intent = new Intent(MainActivity.this, Carros.class);
-                //intent.putExtra("nombreUsuario", TxtNombre.getText().toString());
+            }
+            else if (view.getId() == R.id.btnCarrosI){
+                Intent intent = new Intent(MainActivity.this,  Carros.class);
                 startActivity(intent);
-                break;
-            // if (v.getId() == R.id.BtnCarros){
-            //   Intent intent = new Intent(MainActivity.this,  Carros.class);
-            // startActivity(intent);
-            //    }
+            }
+            else if (view.getId() == R.id.btnVendedoresI){
+                Intent intent = new Intent(MainActivity.this,  Vendedores.class);
+                startActivity(intent);
+            }
         }
-    }
+
 }

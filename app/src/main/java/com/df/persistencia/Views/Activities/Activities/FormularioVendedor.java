@@ -13,7 +13,7 @@ import com.df.persistencia.Datos.dbCarros;
 import com.df.persistencia.Model.Carro;
 import com.df.persistencia.R;
 
-public class FormularioAuto extends AppCompatActivity implements View.OnClickListener {
+public class FormularioVendedor extends AppCompatActivity implements View.OnClickListener {
 
     TextView textNameCar ;
     TextView textDocumentC ;

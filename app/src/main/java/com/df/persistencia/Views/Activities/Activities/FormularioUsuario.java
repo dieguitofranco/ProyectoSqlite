@@ -27,11 +27,13 @@ public class FormularioUsuario extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_usuario);
+
         textNamePerson = findViewById(R.id.txtName);
         textDocument = findViewById(R.id.txtDocument);
         textEdad = findViewById(R.id.txtEdad);
         textEmail = findViewById(R.id.txtEmail);
         textPhone = findViewById(R.id.txtTelefono);
+
         btnAgregar  = findViewById(R.id.btnAgregar);
         btnAgregar.setOnClickListener(this);
     }
@@ -40,11 +42,13 @@ public class FormularioUsuario extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         if (v.getId() == R.id.btnAgregar){
             Persona p = new Persona();
+
             p.setTelefono(textPhone.getText().toString());
             p.setDocumento(textDocument.getText().toString());
             p.setName(textNamePerson.getText().toString());
             p.setEmail(textEmail.getText().toString());
             p.setEdad(Integer.parseInt(textEdad.getText().toString()));
+
             BaseDatosCarros dbHelper = new BaseDatosCarros(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             dbPersonas dbp = new dbPersonas(db);
