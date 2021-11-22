@@ -27,7 +27,7 @@ public class dbCarros {
         cv.put(Estructuras.ColumnasCarro.placa, c.getPlaca());
         cv.put(Estructuras.ColumnasCarro.value, c.getValue());
        // cv.put(Estructuras.ColumnasCarro.url, c.getUrl());
-       // db.insert(BaseDatosCarros.Tablas.Personas,null, cv);
+        db.insert(BaseDatosCarros.Tablas.Carros,null, cv);
     }
 
     public void deleteCarro(String document){
@@ -61,7 +61,7 @@ public class dbCarros {
                 car.setId(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.id)));
                 car.setColor(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.color)));
                 car.setName(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.name)));
-                car.setModelo(c.getInt(c.getColumnIndex(Estructuras.ColumnasCarro.modelo)));
+                car.setModelo(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.modelo)));
                 car.setPlaca(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.placa)));
                 car.setTipo(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.tipo)));
                 car.setValue(c.getString(c.getColumnIndex(Estructuras.ColumnasCarro.value)));

@@ -6,13 +6,13 @@ public class Carro {
     private String name;
     private String value;
     private String placa;
-    private int modelo;
+    private String modelo;
     private String color;
     private String tipo;
     private String documento;
     private String url;
 
-    public Carro(String id, String name, String value, String placa, int modelo, String color, String tipo, String documento, String url) {
+    public Carro() {
         this.id = id;
         this.name = name;
         this.value = value;
@@ -21,17 +21,6 @@ public class Carro {
         this.color = color;
         this.tipo = tipo;
         this.documento = documento;
-        this.url = url;
-    }
-    public Carro() {
-
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
         this.url = url;
     }
 
@@ -55,6 +44,10 @@ public class Carro {
         return value;
     }
 
+    public void setValue(String value) {
+        this.value = value;
+    }
+
     public String getPlaca() {
         return placa;
     }
@@ -63,11 +56,11 @@ public class Carro {
         this.placa = placa;
     }
 
-    public int getModelo() {
+    public String getModelo() {
         return modelo;
     }
 
-    public void setModelo(int modelo) {
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
@@ -95,7 +88,11 @@ public class Carro {
         this.documento = documento;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

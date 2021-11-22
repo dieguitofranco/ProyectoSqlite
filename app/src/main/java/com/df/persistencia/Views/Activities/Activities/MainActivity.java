@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 import com.df.persistencia.R;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class    MainActivity extends AppCompatActivity implements View.OnClickListener {
 
    // SharedPreferences preferencias;
     //EditText txtName;
@@ -48,8 +48,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        Toast.makeText(this,"la cantidad de personas son:" + dbp.conteoPersonas(), Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void onClick(View view) {
+        @Override
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()){
+            case R.id.btnPersonasI:
+                intent = new Intent(this, Personas.class);
+                startActivity(intent);
+                break;
+            case R.id.btnCarrosI:
+                intent = new Intent(this, Carros.class);
+                startActivity(intent);
+                break;
+            case R.id.btnVendedoresI:
+                intent = new Intent(this, Vendedores.class);
+                startActivity(intent);
+                break;
+        }
+    }
+
+   // public void onClick(View view) {
        // Intent intent;
         //switch (view.getId()) {
           //  case R.id.btnPersonasI:
@@ -60,18 +78,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
               //  intent = new Intent(this, Carros.class);
                 //startActivity(intent);
                 //break;
-            if (view.getId() == R.id.btnPersonasI){
-                Intent intent = new Intent(MainActivity.this,  Personas.class);
-                startActivity(intent);
-            }
-            else if (view.getId() == R.id.btnCarrosI){
-                Intent intent = new Intent(MainActivity.this,  Carros.class);
-                startActivity(intent);
-            }
-            else if (view.getId() == R.id.btnVendedoresI){
-                Intent intent = new Intent(MainActivity.this,  Vendedores.class);
-                startActivity(intent);
-            }
-        }
+           // if (view.getId() == R.id.btnPersonasI){
+      //          Intent intent = new Intent(MainActivity.this,  Personas.class);
+        //        startActivity(intent);
+          //  }
+            //else if (view.getId() == R.id.btnCarrosI){
+              //  Intent intent = new Intent(MainActivity.this,  Carros.class);
+                //startActivity(intent);
+    //        }
+      //      else if (view.getId() == R.id.btnVendedoresI){
+        //        Intent intent = new Intent(MainActivity.this,  Vendedores.class);
+          //      startActivity(intent);
+            //}
+      //  }
 
 }

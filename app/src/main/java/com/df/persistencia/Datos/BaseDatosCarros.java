@@ -47,8 +47,8 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                         "%s TEXT NOT NULL," + //tipo
                         "%s TEXT NOT NULL," + //url
                         "%s TEXT NOT NULL," + //documento
-                        "foreign key(%s) references %s (%s))" //declaracion llave foranea
-                ,Tablas.Carros,
+                        "foreign key(%s) references %s (%s))", //declaracion llave foranea
+                Tablas.Carros,
                 Estructuras.ColumnasCarro.id,
                 Estructuras.ColumnasCarro.name,
                 Estructuras.ColumnasCarro.value,
@@ -59,16 +59,17 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                 Estructuras.ColumnasCarro.url,
                 Estructuras.ColumnasCarro.documento,
                 Estructuras.ColumnasCarro.documento,//llave foranea
-                Tablas.Personas, Estructuras.ColumnasPersona.documento));
+                Tablas.Personas,
+                Estructuras.ColumnasPersona.documento));
 
         db.execSQL(String.format("CREATE TABLE %s " +
                         "(%s TEXT PRIMARY KEY," + //documento
                         "%s TEXT NOT NULL," + //nombre
                         "%s TEXT NOT NULL)", //telefono
                 Tablas.Vendedores,
-                Estructuras.ColumnasPersona.documento,
-                Estructuras.ColumnasPersona.name,
-                Estructuras.ColumnasPersona.telefono));
+                Estructuras.ColumnasVendedor.documento,
+                Estructuras.ColumnasVendedor.name,
+                Estructuras.ColumnasVendedor.telefono));
 
 
     }

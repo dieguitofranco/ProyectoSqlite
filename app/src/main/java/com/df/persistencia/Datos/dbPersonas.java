@@ -48,7 +48,6 @@ public class dbPersonas {
     }
 
 
-
     public ArrayList<Persona> obtenerPersonas(){
         ArrayList<Persona> personas = new ArrayList<>( );
         Cursor c = db.rawQuery("Select * from personas", null);

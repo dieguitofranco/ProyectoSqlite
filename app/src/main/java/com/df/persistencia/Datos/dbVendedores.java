@@ -22,11 +22,11 @@ public class dbVendedores {
         cv.put(Estructuras.ColumnasPersona.name,v.getName());
         cv.put(Estructuras.ColumnasPersona.documento,v.getDocumento());
         cv.put(Estructuras.ColumnasPersona.telefono, v.getTelefono());
-        db.insert(BaseDatosCarros.Tablas.Personas,null, cv);
+        db.insert(BaseDatosCarros.Tablas.Vendedores,null, cv);
     }
 
     public void deleteVendedor(String document){
-        db.delete(BaseDatosCarros.Tablas.Personas,Estructuras.ColumnasPersona.documento + "=?",new String[] {document});
+        db.delete(BaseDatosCarros.Tablas.Vendedores,Estructuras.ColumnasPersona.documento + "=?",new String[] {document});
         db.close();
     }
 
@@ -42,8 +42,6 @@ public class dbVendedores {
         c.close();
         return  conteo;
     }
-
-
 
     public ArrayList<Vendedor> obtenerVendedores(){
         ArrayList<Vendedor> vendedores = new ArrayList<>( );

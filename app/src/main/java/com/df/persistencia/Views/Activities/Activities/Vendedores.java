@@ -61,7 +61,7 @@ public class Vendedores extends AppCompatActivity implements View.OnClickListene
         Intent intent;
         switch (view.getId()) {
             case R.id.btnCrearI:
-                intent = new Intent(this, FormularioAuto.class);
+                intent = new Intent(this, FormularioVendedor.class);
                 startActivity(intent);
                 break;
 

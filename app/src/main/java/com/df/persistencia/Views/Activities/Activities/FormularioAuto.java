@@ -55,7 +55,7 @@ public class FormularioAuto extends AppCompatActivity implements View.OnClickLis
             c.setName(textNameCar.getText().toString());
             c.setId(textId.getText().toString());
             c.setColor(textColor.getText().toString());
-            c.setModelo(textModelo.getScrollX());
+            c.setModelo(textModelo.getText().toString());
             c.setPlaca(textPlaca.getText().toString());
             c.setValue(textValue.getText().toString());
             c.setName(textNameCar.getText().toString());

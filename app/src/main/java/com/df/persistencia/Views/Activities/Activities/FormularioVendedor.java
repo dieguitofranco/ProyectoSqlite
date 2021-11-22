@@ -10,19 +10,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.df.persistencia.Datos.BaseDatosCarros;
 import com.df.persistencia.Datos.dbCarros;
+import com.df.persistencia.Datos.dbVendedores;
 import com.df.persistencia.Model.Carro;
+import com.df.persistencia.Model.Vendedor;
 import com.df.persistencia.R;
 
 public class FormularioVendedor extends AppCompatActivity implements View.OnClickListener {
 
-    TextView textNameCar ;
-    TextView textDocumentC ;
-    TextView textColor ;
-    TextView textId ;
-    TextView textTipo ;
-    TextView textModelo;
-    TextView textPlaca;
-    TextView textValue;
+    TextView textNameV ;
+    TextView textDocumentV ;
+    TextView texttel ;
+
     //TextView textUrl;
     Button btnAgregar ;
 
@@ -32,14 +30,9 @@ public class FormularioVendedor extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_auto);
 
-        textNameCar = findViewById(R.id.txtNameI);
-        textDocumentC = findViewById(R.id.txtDocument);
-        textColor = findViewById(R.id.textColorI);
-        textId = findViewById(R.id.txtIdI);
-        textTipo = findViewById(R.id.textTipoI);
-        textModelo = findViewById(R.id.textModeloI);
-        textPlaca = findViewById(R.id.textPlacaI);
-        textValue = findViewById(R.id.txtValorI);
+        textNameV = findViewById(R.id.txtNameVI);
+        textDocumentV = findViewById(R.id.txtIdVI);
+        texttel = findViewById(R.id.txtTelefonoVI);
 
         btnAgregar  = findViewById(R.id.btnAgregarCI);
         btnAgregar.setOnClickListener(this);
@@ -48,22 +41,17 @@ public class FormularioVendedor extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btnAgregarCI){
-            Carro c = new Carro();
+            Vendedor b = new Vendedor();
 
-            c.setTipo(textTipo.getText().toString());
-            c.setDocumento(textDocumentC.getText().toString());
-            c.setName(textNameCar.getText().toString());
-            c.setId(textId.getText().toString());
-            c.setColor(textColor.getText().toString());
-            c.setModelo(textModelo.getScrollX());
-            c.setPlaca(textPlaca.getText().toString());
-            c.setValue(textValue.getText().toString());
-            c.setName(textNameCar.getText().toString());
+            b.setName(textNameV.getText().toString());
+            b.setDocumento(textDocumentV.getText().toString());
+            b.setTelefono(texttel.getText().toString());
+
 
             BaseDatosCarros dbHelper = new BaseDatosCarros(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
-            dbCarros dbc = new dbCarros(db);
-            dbc.insertCarro(c);
+            dbVendedores dbv = new dbVendedores(db);
+            dbv.insertVendedor(b);
             finish();
         }
     }

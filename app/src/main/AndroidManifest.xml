@@ -26,6 +26,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Views.Activities.Activities.FormularioVendedor"
+            android:exported="true" />
+        <activity
+            android:name=".Views.Activities.Activities.FormularioAuto"
+            android:exported="true" />
+        <activity
+            android:name=".Views.Activities.Activities.Carros"
+            android:exported="true" />
+        <activity
+            android:name=".Views.Activities.Activities.Vendedores"
+            android:exported="true" />
+
     </application>
 
 </manifest>
