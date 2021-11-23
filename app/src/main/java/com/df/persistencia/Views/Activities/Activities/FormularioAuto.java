@@ -33,12 +33,12 @@ public class FormularioAuto extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_formulario_auto);
 
         textNameCar = findViewById(R.id.txtNameI);
-        textDocumentC = findViewById(R.id.txtDocument);
-        textColor = findViewById(R.id.textColorI);
+        textDocumentC = findViewById(R.id.txtIdPropietarioI);
+        textColor = findViewById(R.id.txtColorI);
         textId = findViewById(R.id.txtIdI);
-        textTipo = findViewById(R.id.textTipoI);
-        textModelo = findViewById(R.id.textModeloI);
-        textPlaca = findViewById(R.id.textPlacaI);
+        textTipo = findViewById(R.id.txtTipoI);
+        textModelo = findViewById(R.id.txtModeloI);
+        textPlaca = findViewById(R.id.txtPlacaI);
         textValue = findViewById(R.id.txtValorI);
 
         btnAgregar  = findViewById(R.id.btnAgregarCI);
@@ -50,15 +50,16 @@ public class FormularioAuto extends AppCompatActivity implements View.OnClickLis
         if (v.getId() == R.id.btnAgregarCI){
             Carro c = new Carro();
 
+
+            c.setId(textId.getText().toString());
+            c.setName(textNameCar.getText().toString());
+            c.setValue(textValue.getText().toString());
+            c.setPlaca(textPlaca.getText().toString());
+            c.setModelo(textModelo.getText().toString());
+            c.setColor(textColor.getText().toString());
             c.setTipo(textTipo.getText().toString());
             c.setDocumento(textDocumentC.getText().toString());
-            c.setName(textNameCar.getText().toString());
-            c.setId(textId.getText().toString());
-            c.setColor(textColor.getText().toString());
-            c.setModelo(textModelo.getText().toString());
-            c.setPlaca(textPlaca.getText().toString());
-            c.setValue(textValue.getText().toString());
-            c.setName(textNameCar.getText().toString());
+            //c.setName(textNameCar.getText().toString());
 
             BaseDatosCarros dbHelper = new BaseDatosCarros(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();

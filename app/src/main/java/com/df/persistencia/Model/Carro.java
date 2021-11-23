@@ -10,9 +10,9 @@ public class Carro {
     private String color;
     private String tipo;
     private String documento;
-    private String url;
+   // private String url;
 
-    public Carro() {
+    public Carro(String id, String name, String value, String placa, String modelo, String color, String tipo, String documento) {
         this.id = id;
         this.name = name;
         this.value = value;
@@ -21,7 +21,10 @@ public class Carro {
         this.color = color;
         this.tipo = tipo;
         this.documento = documento;
-        this.url = url;
+    }
+
+    public Carro() {
+
     }
 
     public String getId() {
@@ -86,13 +89,5 @@ public class Carro {
 
     public void setDocumento(String documento) {
         this.documento = documento;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 }

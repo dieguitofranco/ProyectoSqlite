@@ -33,9 +33,9 @@ public class Vendedores extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_carros);
-        btnCrearV = findViewById(R.id.btnCrearI);
-        listaVendedor = findViewById(R.id.lstViewCarI);
+        setContentView(R.layout.activity_vendedores);
+        btnCrearV = findViewById(R.id.btnCrearVI);
+        listaVendedor = findViewById(R.id.lstViewVenI);
         btnCrearV.setOnClickListener(this);
         listaVendedor.setOnItemClickListener(this);
         listaVendedor.setOnItemLongClickListener(this);

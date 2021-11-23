@@ -45,7 +45,7 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                         "%s INTEGER NOT NULL," + //modelo
                         "%s TEXT NOT NULL," + //color
                         "%s TEXT NOT NULL," + //tipo
-                        "%s TEXT NOT NULL," + //url
+                       // "%s TEXT NOT NULL," + //url
                         "%s TEXT NOT NULL," + //documento
                         "foreign key(%s) references %s (%s))", //declaracion llave foranea
                 Tablas.Carros,
@@ -56,7 +56,7 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                 Estructuras.ColumnasCarro.modelo,
                 Estructuras.ColumnasCarro.color,
                 Estructuras.ColumnasCarro.tipo,
-                Estructuras.ColumnasCarro.url,
+               // Estructuras.ColumnasCarro.url,
                 Estructuras.ColumnasCarro.documento,
                 Estructuras.ColumnasCarro.documento,//llave foranea
                 Tablas.Personas,

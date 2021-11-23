@@ -50,9 +50,9 @@ public class dbVendedores {
             c.moveToFirst();
             do{
                 Vendedor ven = new Vendedor();
-                ven.setDocumento(c.getString(c.getColumnIndex(Estructuras.ColumnasPersona.documento)));
-                ven.setName(c.getString(c.getColumnIndex(Estructuras.ColumnasPersona.name)));
-                ven.setTelefono(c.getString(c.getColumnIndex(Estructuras.ColumnasPersona.telefono)));
+                ven.setDocumento(c.getString(c.getColumnIndex(Estructuras.ColumnasVendedor.documento)));
+                ven.setName(c.getString(c.getColumnIndex(Estructuras.ColumnasVendedor.name)));
+                ven.setTelefono(c.getString(c.getColumnIndex(Estructuras.ColumnasVendedor.telefono)));
                 vendedores.add(ven);
             }while (c.moveToNext());
         }

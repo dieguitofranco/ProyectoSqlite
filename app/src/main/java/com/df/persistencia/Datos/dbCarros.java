@@ -18,8 +18,8 @@ public class dbCarros {
 
     public void insertCarro(Carro c){
         ContentValues cv = new ContentValues();
-        cv.put(Estructuras.ColumnasCarro.name,c.getName());
-        cv.put(Estructuras.ColumnasCarro.documento,c.getDocumento());
+        cv.put(Estructuras.ColumnasCarro.name, c.getName());
+        cv.put(Estructuras.ColumnasCarro.documento, c.getDocumento());
         cv.put(Estructuras.ColumnasCarro.color, c.getColor());
         cv.put(Estructuras.ColumnasCarro.id, c.getId());
         cv.put(Estructuras.ColumnasCarro.tipo, c.getTipo());
@@ -47,7 +47,6 @@ public class dbCarros {
         c.close();
         return  conteo;
     }
-
 
 
     public ArrayList<Carro> obtenerCarros(){

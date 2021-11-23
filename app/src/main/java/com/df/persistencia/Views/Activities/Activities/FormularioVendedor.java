@@ -28,19 +28,19 @@ public class FormularioVendedor extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_formulario_auto);
+        setContentView(R.layout.activity_formulario_vendedor);
 
         textNameV = findViewById(R.id.txtNameVI);
         textDocumentV = findViewById(R.id.txtIdVI);
         texttel = findViewById(R.id.txtTelefonoVI);
 
-        btnAgregar  = findViewById(R.id.btnAgregarCI);
+        btnAgregar  = findViewById(R.id.btnAgregarCVI);
         btnAgregar.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btnAgregarCI){
+        if (v.getId() == R.id.btnAgregarCVI){
             Vendedor b = new Vendedor();
 
             b.setName(textNameV.getText().toString());

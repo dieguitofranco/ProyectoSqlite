@@ -6,6 +6,12 @@ public class Vendedor {
     private String name;
     private String telefono;
 
+    public Vendedor(String documento, String name, String telefono) {
+        this.documento = documento;
+        this.name = name;
+        this.telefono = telefono;
+    }
+
     public String getDocumento() {
         return documento;
     }
@@ -31,9 +37,6 @@ public class Vendedor {
     }
 
     public Vendedor() {
-        this.documento = documento;
-        this.name = name;
-        this.telefono = telefono;
 
     }
 }
