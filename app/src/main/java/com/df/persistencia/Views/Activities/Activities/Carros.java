@@ -58,7 +58,7 @@ public class Carros extends AppCompatActivity implements View.OnClickListener, A
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
-            case R.id.btnCrear:
+            case R.id.addNewCar:
                 intent = new Intent(Carros.this, CrearCarro.class);
                 startActivity(intent);
                 break;

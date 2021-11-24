@@ -56,10 +56,10 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                         "%s TEXT NOT NULL," + //color
                         "%s TEXT NOT NULL," + //tipo
                         "%s TEXT NOT NULL," + //url
-                        "%s TEXT NOT NULL," + //documento propietario
-                        "foreign key(%s) references %s (%s))," + //declaracion llave foranea
-                        "%s TEXT NOT NULL," + //documento vendedor
-                        "foreign key(%s) references %s (%s))",  //declaracion llave foranea
+                        "%s TEXT NULL," + //documento propietario
+                        "%s TEXT NULL)",  //documento vendedor
+                        // "foreign key(%s) references %s (%s)," + //declaracion llave foranea
+                        //"foreign key(%s) references %s (%s))",  //declaracion llave foranea
                 Tablas.Carros,
                 Estructuras.ColumnasCarro.id,
                 Estructuras.ColumnasCarro.name,
@@ -69,10 +69,10 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                 Estructuras.ColumnasCarro.color,
                 Estructuras.ColumnasCarro.tipo,
                 Estructuras.ColumnasCarro.url,
-                Estructuras.ColumnasCarro.documento,Estructuras.ColumnasCarro.documento,
-                Tablas.Personas, Estructuras.ColumnasPersona.documento,
-                Estructuras.ColumnasCarro.vendedor, Estructuras.ColumnasCarro.vendedor,
-                Tablas.Vendedores, Estructuras.ColumnasVendedor.documento
+                Estructuras.ColumnasCarro.documento,
+                Estructuras.ColumnasCarro.vendedor
+               // Tablas.Personas, Estructuras.ColumnasPersona.documento,
+               // Tablas.Vendedores, Estructuras.ColumnasVendedor.documento
         ));
     }
 

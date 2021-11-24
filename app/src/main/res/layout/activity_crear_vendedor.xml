@@ -86,7 +86,7 @@ tools:context=".Views.Activities.Activities.CrearVendedor">
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Oficina"
-        android:inputType="number"
+        android:inputType="text"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </LinearLayout>
