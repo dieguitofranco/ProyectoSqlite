@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText txtName;
     Button btnPersonas;
     Button btnCarros;
+    Button btnVendedores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnCarros = findViewById(R.id.btnCarros);
         btnCarros.setOnClickListener(this);
+
+        btnVendedores = findViewById(R.id.btnVendedores);
+        btnVendedores.setOnClickListener(this);
+
 //        preferencias = getSharedPreferences("local", Context.MODE_PRIVATE);
 //        txtName = findViewById(R.id.txtName);
 //        String name = preferencias.getString("Name","");
@@ -51,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (v.getId() == R.id.btnCarros){
             Intent intent = new Intent(MainActivity.this,  Carros.class);
+            startActivity(intent);
+        }else if (v.getId() == R.id.btnVendedores){
+            Intent intent = new Intent(MainActivity.this,  Vendedores.class);
             startActivity(intent);
         }
     }

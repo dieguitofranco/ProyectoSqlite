@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BaseDatosCarros extends SQLiteOpenHelper {
 
     private static final String DATA_BASE_NAME = "carros.db";
-    private static final int ACTUAL_VERSION = 2;
+    private static final int ACTUAL_VERSION = 3;
     private final Context context;
 
     public BaseDatosCarros(Context context) {
@@ -18,6 +18,7 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
     interface Tablas{
         String Carros = "carros";
         String Personas = "personas";
+        String Vendedores = "vendedores";
     }
 
     @Override
@@ -42,14 +43,24 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                         "%s TEXT NOT NULL," + //color
                         "%s TEXT NOT NULL," + //tipo
                         "%s TEXT NOT NULL," + //url
-                        "%s TEXT NOT NULL," + //documento
-                        "foreign key(%s) references %s (%s))" //declaracion llave foranea
-                ,Tablas.Carros, Estructuras.ColumnasCarro.id,
+                        "%s TEXT NOT NULL)",  //documento
+                        //"foreign key(%s) references %s (%s))" //declaracion llave foranea
+                Tablas.Carros, Estructuras.ColumnasCarro.id,
                 Estructuras.ColumnasCarro.name,Estructuras.ColumnasCarro.value,
                 Estructuras.ColumnasCarro.placa,Estructuras.ColumnasCarro.modelo,
-                Estructuras.ColumnasCarro.color, Estructuras.ColumnasCarro.tipo, Estructuras.ColumnasCarro.url,
-                Estructuras.ColumnasCarro.documento,Estructuras.ColumnasCarro.documento));
-                //Tablas.Personas, Estructuras.ColumnasPersona.documento
+                Estructuras.ColumnasCarro.color, Estructuras.ColumnasCarro.tipo,
+                Estructuras.ColumnasCarro.documento, Estructuras.ColumnasCarro.url));
+
+
+        db.execSQL(String.format("CREATE TABLE %s " +
+                        "(%s TEXT PRIMARY KEY," + //documento
+                        "%s TEXT NOT NULL," + //nombre
+                        "%s TEXT NOT NULL," + //telefono
+                        "%s TEXT NOT NULL," + //direccion
+                        "%s TEXT NOT NULL)", //correo
+                Tablas.Vendedores, Estructuras.ColumnasVendedor.documentov,
+                Estructuras.ColumnasVendedor.nombrev, Estructuras.ColumnasVendedor.telefonov,
+                Estructuras.ColumnasVendedor.direccionv, Estructuras.ColumnasVendedor.correov));
 
 
     }
@@ -58,6 +69,7 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Carros);
         db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Personas);
+        db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Vendedores);
         onCreate(db);
     }
 }
