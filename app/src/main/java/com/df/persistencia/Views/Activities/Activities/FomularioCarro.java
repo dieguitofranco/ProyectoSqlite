@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.df.persistencia.Datos.BaseDatosCarros;
+import com.df.persistencia.Datos.dbCarros;
 import com.df.persistencia.Datos.dbPersonas;
 import com.df.persistencia.Model.Carro;
 import com.df.persistencia.Model.Persona;
@@ -51,11 +52,11 @@ public class FomularioCarro extends AppCompatActivity implements View.OnClickLis
             carro.setTipo(txtTipoCarro.getText().toString());
             carro.setDocumento(txtDocumentoCarro.getText().toString());
             carro.setUrl(null);
-            /*BaseDatosCarros dbHelper = new BaseDatosCarros(this);
+            BaseDatosCarros dbHelper = new BaseDatosCarros(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
-            dbPersonas dbp = new dbPersonas(db);
-            dbp.insertPerson(p);
-            finish();*/
+            dbCarros dbc = new dbCarros(db);
+            dbc.insertCarro(carro);
+            finish();
         }
     }
 }

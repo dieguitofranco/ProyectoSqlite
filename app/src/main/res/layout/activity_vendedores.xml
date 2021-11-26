@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Activities.Activities.Vendedores">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Vendedores"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lstListaVendedores"
+        android:layout_width="408dp"
+        android:layout_height="635dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <Button
+        android:id="@+id/btnModalAgregarVend"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        app:icon="@android:drawable/ic_menu_add"
+        tools:layout_editor_absoluteX="335dp"
+        tools:layout_editor_absoluteY="36dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

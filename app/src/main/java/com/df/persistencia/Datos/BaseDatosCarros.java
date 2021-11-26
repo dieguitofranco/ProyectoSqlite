@@ -18,6 +18,7 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
     interface Tablas{
         String Carros = "carros";
         String Personas = "personas";
+        String Vendedores = "vendedores";
     }
 
     @Override
@@ -51,13 +52,20 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                 Estructuras.ColumnasCarro.documento,Estructuras.ColumnasCarro.documento,
                 Tablas.Personas, Estructuras.ColumnasPersona.documento));
 
-
+        db.execSQL(String.format("CREATE TABLE %s " +
+                "(%s INTEGER PRIMARY KEY AUTOINCREMENT," + //id
+                "foreign key(%s) references %s (%s)," + //documento
+                "foreign key(%s) references %s (%s))" //declaracion llave foranea
+                ,Tablas.Vendedores, Estructuras.ColumnasVendedor.id,
+                Tablas.Personas, Estructuras.ColumnasPersona.documento,
+                Tablas.Carros, Estructuras.ColumnasCarro.id));
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Carros);
         db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Personas);
+        db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Vendedores);
         onCreate(db);
     }
 }
