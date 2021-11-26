@@ -12,34 +12,34 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.df.persistencia.Datos.BaseDatosCarros;
-import com.df.persistencia.Datos.dbCarros;
 import com.df.persistencia.Datos.dbPersonas;
-import com.df.persistencia.Model.Carro;
+import com.df.persistencia.Datos.dbVendedores;
+import com.df.persistencia.Model.Persona;
+import com.df.persistencia.Model.Vendedor;
 import com.df.persistencia.R;
-import com.df.persistencia.Views.Activities.Adapters.CarroAdaptador;
 import com.df.persistencia.Views.Activities.Adapters.PersonaAdaptador;
-
+import com.df.persistencia.Views.Activities.Adapters.VendedorAdaptador;
 
 import java.util.ArrayList;
 
-public class Carros extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
+public class Vendedores extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
 
-    private Button btnCrear;
-    private ListView listaCarro;
-    dbCarros dbc;
-    ArrayList<Carro> carros;
-    CarroAdaptador carAdapter;
+    private Button btnVendedoresAgre;
+    private ListView listaVendedores;
+    dbVendedores dbv;
+    ArrayList<Vendedor> vendedores;
+    VendedorAdaptador vendedorAdaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_carros);
-        btnCrear = findViewById(R.id.btnFormCarros);
-        listaCarro = findViewById(R.id.lstCarros);
-        listaCarro.setOnItemClickListener(this);
-        listaCarro.setOnItemLongClickListener(this);
+        setContentView(R.layout.activity_vendedores);
+        btnVendedoresAgre = findViewById(R.id.btnModalAgregarVend);
+        listaVendedores = findViewById(R.id.lstListaVendedores);
+        btnVendedoresAgre.setOnClickListener(this);
+        listaVendedores.setOnItemClickListener(this);
+        listaVendedores.setOnItemLongClickListener(this);
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -51,18 +51,18 @@ public class Carros extends AppCompatActivity implements View.OnClickListener, A
     public void updateElements(){
         BaseDatosCarros dbHelper = new BaseDatosCarros(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
-        dbc = new dbCarros(db);
-        carros =dbc.obtenerCarro();
-        carAdapter = new CarroAdaptador(this,carros);
-        listaCarro.setAdapter(carAdapter);
+        dbv = new dbVendedores(db);
+        vendedores =dbv.obtenerVendedores();
+        vendedorAdaptador = new VendedorAdaptador(this,vendedores);
+        listaVendedores.setAdapter(vendedorAdaptador);
     }
 
     @Override
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
-            case R.id.btnCrear:
-                intent = new Intent(this, FomularioCarro.class);
+            case R.id.btnModalAgregarVend:
+                intent = new Intent(this, FormularioVendedor.class);
                 startActivity(intent);
                 break;
 
@@ -71,12 +71,12 @@ public class Carros extends AppCompatActivity implements View.OnClickListener, A
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(this, "Ha seleccionado el carro: ", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Ha seleccionado el vendedor del carro: ", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-        dbc.deleteCarro(carros.get(i).getId());
+        dbv.deleteVendedor(vendedores.get(i).getId());
         updateElements();
         return false;
     }
