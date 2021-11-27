@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Parcial2/ProyectoSqlite/app/src/main/res/layout/activity_formulario_vendedor.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Parcial2/ProyectoSqlite/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Parcial2/ProyectoSqlite/app/src/main/res/layout/activity_personas.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Parcial2/ProyectoSqlite/app/src/main/res/layout/activity_vendedores.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Parcial2/ProyectoSqlite/app/src/main/res/layout/vendedor_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USUARIO/Documents/ING_INFORMATICA/Cuarto_Semestre/Prog_Moviles/ProyectoSqlite/ProyectoSqlite/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USUARIO/Documents/ING_INFORMATICA/Cuarto_Semestre/Prog_Moviles/ProyectoSqlite/ProyectoSqlite/app/src/main/res/layout/activity_personas.xml" value="0.33" />
         <entry key="..\:/Users/USUARIO/Documents/ING_INFORMATICA/Cuarto_Semestre/Prog_Moviles/ProyectoSqlite/ProyectoSqlite/app/src/main/res/layout/person_item.xml" value="0.36666666666666664" />
