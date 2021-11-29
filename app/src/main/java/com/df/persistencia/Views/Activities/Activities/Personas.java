@@ -44,7 +44,6 @@ public class Personas extends AppCompatActivity implements View.OnClickListener,
         super.onStart();
         updateElements();
 
-
     }
 
     public void updateElements(){

@@ -19,7 +19,7 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCarros"
         android:layout_width="271dp"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
