@@ -4,41 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.Activities.Activities.Carros">
+    tools:context=".Views.Activities.Activities.Vendedores">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView4"
         android:layout_width="197dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:text="Carros"
+        android:text="Vendedores"
         android:textColor="#406868"
         android:textSize="40dp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.359"
+        app:layout_constraintHorizontal_bias="0.336"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnCreateCar"
+        android:id="@+id/btnCreateSeller"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:background="#406868"
+        android:backgroundTint="#406868"
         android:text="Crear"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.627"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/listViewCar"
+        android:id="@+id/listViewSeller"
         android:layout_width="409dp"
         android:layout_height="643dp"
-        android:layout_marginTop="92dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,4 +22,12 @@ public class Estructuras {
         String telefono = "telefono_person";
     }
 
+    interface ColumnasVendedor{
+        String documentov = "document_seller";
+        String nombrev = "name_seller";
+        String telefonov = "phone_seller";
+        String direccionv = "address_seller";
+        String correov = "email_seller";
+    }
+
 }

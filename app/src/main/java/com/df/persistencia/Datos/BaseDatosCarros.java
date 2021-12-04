@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BaseDatosCarros extends SQLiteOpenHelper {
 
     private static final String DATA_BASE_NAME = "carros.db";
-    private static final int ACTUAL_VERSION = 3;
+    private static final int ACTUAL_VERSION = 4;
     private final Context context;
 
     public BaseDatosCarros(Context context) {
@@ -18,6 +18,7 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
     interface Tablas{
         String Carros = "carros";
         String Personas = "personas";
+        String Vendedores = "vendedores";
     }
 
     @Override
@@ -50,11 +51,20 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                 Estructuras.ColumnasCarro.color, Estructuras.ColumnasCarro.tipo,
                 Estructuras.ColumnasCarro.documento, Estructuras.ColumnasCarro.url));
 
-
+        db.execSQL(String.format("CREATE TABLE %s " +
+                        "(%s TEXT PRIMARY KEY," + //documento
+                        "%s TEXT NOT NULL," + //nombre
+                        "%s TEXT NOT NULL," + //teléfono
+                        "%s TEXT NOT NULL," + //dirección
+                        "%s TEXT NOT NULL)", //email
+                Tablas.Vendedores, Estructuras.ColumnasVendedor.documentov,
+                Estructuras.ColumnasVendedor.nombrev, Estructuras.ColumnasVendedor.telefonov,
+                Estructuras.ColumnasVendedor.direccionv, Estructuras.ColumnasVendedor.correov));
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Vendedores);
         db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Carros);
         db.execSQL("DROP TABLE IF EXISTS "+ Tablas.Personas);
         onCreate(db);
