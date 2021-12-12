@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.df.persistencia.Model.Vendedor;
 import com.df.persistencia.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -16,7 +17,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     SharedPreferences preferencias;
     EditText txtName;
     Button btnPersonas;
-
+    Button btnCarros;
+    Button btnVendedor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         btnPersonas = findViewById(R.id.btnPersonas);
         btnPersonas.setOnClickListener(this);
+
+        btnCarros = findViewById(R.id.btnCarros);
+        btnCarros.setOnClickListener(this);
+
+        btnVendedor=findViewById(R.id.btnVendedor);
+        btnVendedor.setOnClickListener(this);
 
 //        preferencias = getSharedPreferences("local", Context.MODE_PRIVATE);
 //        txtName = findViewById(R.id.txtName);
@@ -47,6 +55,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this,  Personas.class);
             startActivity(intent);
 
+        }
+        else if (v.getId() == R.id.btnCarros){
+            Intent intent = new Intent(MainActivity.this,  Carros.class);
+            startActivity(intent);
+        }
+    else if (v.getId() == R.id.btnVendedor){
+        Intent intent = new Intent(MainActivity.this,  Vendedor.class);
+        startActivity(intent);
         }
     }
 }

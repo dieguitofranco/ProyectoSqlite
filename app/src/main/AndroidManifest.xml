@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Persistencia">
         <activity
+            android:name=".Views.Activities.Activities.FormularioVendedor"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Activities.Activities.FormularioCarros"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Activities.Activities.Carros"
+            android:exported="true" />
+        <activity
             android:name=".Views.Activities.Activities.FormularioUsuario"
             android:exported="true" />
         <activity

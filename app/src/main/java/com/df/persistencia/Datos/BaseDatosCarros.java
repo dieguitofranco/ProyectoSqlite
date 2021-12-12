@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BaseDatosCarros extends SQLiteOpenHelper {
 
     private static final String DATA_BASE_NAME = "carros.db";
-    private static final int ACTUAL_VERSION = 2;
+    private static final int ACTUAL_VERSION = 3;
     private final Context context;
 
     public BaseDatosCarros(Context context) {
@@ -18,6 +18,7 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
     interface Tablas{
         String Carros = "carros";
         String Personas = "personas";
+        String Vendedores = "vendedores";
     }
 
     @Override
@@ -42,13 +43,13 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
                         "%s TEXT NOT NULL," + //color
                         "%s TEXT NOT NULL," + //tipo
                         "%s TEXT NOT NULL," + //url
-                        "%s TEXT NOT NULL," + //documento
-                        "foreign key(%s) references %s (%s))" //declaracion llave foranea
+                        "%s TEXT NOT NULL,"  //documento
+                //  "foreign key(%s) references %s (%s))" //declaracion llave foranea
                 ,Tablas.Carros, Estructuras.ColumnasCarro.id,
                 Estructuras.ColumnasCarro.name,Estructuras.ColumnasCarro.value,
                 Estructuras.ColumnasCarro.placa,Estructuras.ColumnasCarro.modelo,
                 Estructuras.ColumnasCarro.color, Estructuras.ColumnasCarro.tipo, Estructuras.ColumnasCarro.url,
-                Estructuras.ColumnasCarro.documento,Estructuras.ColumnasCarro.documento,
+                Estructuras.ColumnasCarro.documento,
                 Tablas.Personas, Estructuras.ColumnasPersona.documento));
 
 
