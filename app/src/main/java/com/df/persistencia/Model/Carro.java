@@ -12,6 +12,9 @@ public class Carro {
     private String documento;
     private String url;
 
+    public Carro() {
+
+    }
     public Carro(String id, String name, String value, String placa, int modelo, String color, String tipo, String documento, String url) {
         this.id = id;
         this.name = name;

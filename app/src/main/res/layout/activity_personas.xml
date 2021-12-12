@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textPlaca"
         android:layout_width="197dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textPlaca" />
 
     <Button
         android:id="@+id/btnCrear"
@@ -40,7 +40,7 @@
         android:gravity="center"
         app:icon="@android:drawable/ic_menu_add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        app:layout_constraintStart_toEndOf="@+id/textPlaca"
+        app:layout_constraintTop_toTopOf="@+id/textPlaca" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

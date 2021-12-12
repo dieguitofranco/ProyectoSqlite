@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textPlaca"
         android:layout_width="197dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -34,7 +34,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textPlaca" />
 
     <EditText
         android:id="@+id/txtDocument"
