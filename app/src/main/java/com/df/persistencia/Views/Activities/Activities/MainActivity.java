@@ -25,20 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPersonas = findViewById(R.id.btnPersonas);
         btnPersonas.setOnClickListener(this);
 
-//        preferencias = getSharedPreferences("local", Context.MODE_PRIVATE);
-//        txtName = findViewById(R.id.txtName);
-//        String name = preferencias.getString("Name","");
-//        if (!name.equalsIgnoreCase("")){
-//            Toast.makeText(this, "el nombre guardado es "+ name, Toast.LENGTH_LONG).show();
-//        }
-//        BaseDatosCarros dbHelper = new BaseDatosCarros(this);
-//        SQLiteDatabase db = dbHelper.getWritableDatabase();
-//       // Persona per = new Persona("Diego","");
-//        dbPersonas dbp = new dbPersonas(db);
-//       // dbp.insertPerson(per);
-//        Toast.makeText(this,"la cantidad de personas son:" + dbp.conteoPersonas(), Toast.LENGTH_SHORT).show();
-
-
     }
 
     @Override

@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BaseDatosCarros extends SQLiteOpenHelper {
 
     private static final String DATA_BASE_NAME = "carros.db";
-    private static final int ACTUAL_VERSION = 2;
+    private static final int ACTUAL_VERSION = 3;
     private final Context context;
 
     public BaseDatosCarros(Context context) {
@@ -16,8 +16,8 @@ public class BaseDatosCarros extends SQLiteOpenHelper {
     }
 
     interface Tablas{
-        String Carros = "carros";
-        String Personas = "personas";
+        String Carros = "cars";
+        String Personas = "people";
     }
 
     @Override

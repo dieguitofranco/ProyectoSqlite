@@ -36,7 +36,7 @@ public class dbPersonas {
 
     public int conteoPersonas(){
         int conteo = 0;
-        Cursor c = db.rawQuery("Select count(*) as conteo from personas", null);
+        Cursor c = db.rawQuery("Select count(*) as conteo from "+ BaseDatosCarros.Tablas.Personas, null);
         if (c != null ){
             c.moveToFirst();
             do{
@@ -51,7 +51,7 @@ public class dbPersonas {
 
     public ArrayList<Persona> obtenerPersonas(){
         ArrayList<Persona> personas = new ArrayList<>( );
-        Cursor c = db.rawQuery("Select * from personas", null);
+        Cursor c = db.rawQuery("Select * from "+ BaseDatosCarros.Tablas.Personas, null);
         if (c.getCount() > 0 ){
             c.moveToFirst();
             do{
